@@ -1,7 +1,7 @@
 {
   "scripts": {
     "test": "karma start",
-    "test-headless": "karma start --browsers PhantomJS"
+    "test-headless": "karma start --single-run --browsers PhantomJS"
   },
   "devDependencies": {
     "@types/jasmine": "^2.8.9",
