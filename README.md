@@ -1,4 +1,4 @@
-# ngrx-base-toolbox
+# base-app-toolbox
 A toolbox made with ngrx only to cover the basic needs of a common app
 
 The goal is to have a package which exposes the actions, selectors, reducers, entities and adapters for common functionality of an app. It works as a layer between the backend and the frontend. With the adapter pattern it decouples the data structure which comes from the backend from the store.
