@@ -3,9 +3,9 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                cd package
-                npm install
-                npm run test-headless
+                sh 'cd package'
+                sh 'npm install'
+                sh 'npm run test-headless'
             }
         }
     }
