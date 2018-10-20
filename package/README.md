@@ -1,0 +1,1 @@
+This folder includes the actual package which gets published on npm.
