@@ -8,3 +8,9 @@ For example:
 - Notifications
 - Error Handling, bases on Notification
 - User management, including roles, permissions per role and specific permissions per user, which overwrite the roles permission
+
+The packages should be available on npm, structured like this:
+- @ngrx-base-toolbox/
+  - notifications
+  - error-handling
+  - user-management
