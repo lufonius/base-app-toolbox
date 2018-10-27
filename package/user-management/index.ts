@@ -1,9 +1,3 @@
-import { compose } from '@ngrx/store';
-import { createEntityAdapter } from '@ngrx/entity';
+//this file is used for development
 
-export const HelloWorld = {
-    name: "this ones the default export"
-};
-
-const avoidTreeShaking1 = compose();
-const avoidTreeShaking2 = createEntityAdapter();
+export * from './src/public_api';

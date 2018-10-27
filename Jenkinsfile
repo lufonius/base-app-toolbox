@@ -10,5 +10,21 @@ pipeline {
                 '''
             }
         }
+       stage('Build') {
+            steps {
+                sh '''
+                    cd package/user-management
+                    npm build
+                '''
+            }
+       }
+       stage('Release') {
+            steps {
+                sh '''
+                    cd package/user-management/dist
+                    npm publish
+                '''
+            }
+       }
     }
 }
