@@ -1,6 +1,21 @@
 {
-  "name": "@base-app-toolbox/ngrx-user-management",
+  "name": "@base-app-toolbox/user-management",
+  "version": "0.0.1",
+  "scripts": {
+    "build": "ng-packagr -p package.json"
+  },
+  "ngPackage": {
+    "lib": {
+      "entryFile": "src/public_api.ts"
+    }
+  },
+  "peerDependencies": {
+    "@angular/core": "^6.1.10",
+    "@ngrx/entity": "^6.1.0",
+    "@ngrx/store": "^6.1.0"
+  },
   "devDependencies": {
+    "@angular/core": "^6.1.10",
     "@ngrx/entity": "^6.1.0",
     "@ngrx/store": "^6.1.0"
   }

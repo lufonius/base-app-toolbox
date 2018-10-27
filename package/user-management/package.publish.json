@@ -1,8 +1,0 @@
-{
-  "name": "@base-app-toolbox/ngrx-user-management",
-  "main": "user-management.bundle.js",
-  "peerDependencies": {
-    "@ngrx/entity": "^6.1.0",
-    "@ngrx/store": "^6.1.0"
-  }
-}
