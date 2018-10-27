@@ -1,7 +1,10 @@
 {
   "name": "@base-app-toolbox/ngrx-user-management",
   "devDependencies": {
+    "@angular/core": "^6.1.10",
     "@ngrx/entity": "^6.1.0",
-    "@ngrx/store": "^6.1.0"
+    "@ngrx/store": "^6.1.0",
+    "lodash": "^4.17.11",
+    "rxjs": "^6.3.3"
   }
 }
