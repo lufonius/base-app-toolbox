@@ -1,0 +1,18 @@
+@mixin bat-webapp-navigation-default-element-theme($theme) {
+
+  .bat-navigation-element {
+    .bat-navigation-element-text {
+      .bat-navigation-element-title h3 {
+        color: white;
+      }
+
+      .bat-navigation-element-subtitle span {
+        color: #e3e3e3;
+      }
+    }
+
+    .bat-navigation-element-arrow {
+      color: white;
+    }
+  }
+}

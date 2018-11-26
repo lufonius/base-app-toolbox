@@ -1,0 +1,32 @@
+.bat-navigation-header-container {
+  padding: 16px;
+  padding-bottom: 50px;
+  overflow: hidden;
+  height: fit-content;
+
+  .bat-navigation-header-title span {
+    font-size: 30px;
+    font-weight: lighter;
+    margin-right: 32px;
+  }
+
+  .bat-navigation-header-dismiss .mat-icon, .bat-navigation-header-back .mat-icon {
+    font-size: 50px;
+    font-weight: lighter;
+    height: auto;
+    width: auto;
+    cursor: pointer;
+  }
+
+  .bat-navigation-header-back {
+    margin-right: 16px;
+  }
+}
+
+.bat-navigation-header-container-lt-md {
+  padding-bottom: 16px !important;
+
+  max-width: 100vw;
+  width: 100vw;
+  min-width: 100vw;
+}

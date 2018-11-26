@@ -1,15 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, ContentChild, OnInit, TemplateRef} from '@angular/core';
 
 @Component({
-  selector: 'app-element',
+  selector: 'bat-webapp-nav-element',
   templateUrl: './element.component.html',
-  styleUrls: ['./element.component.css']
+  styleUrls: ['./element.component.scss']
 })
-export class BATElementComponent implements OnInit {
+export class BATWebappNavigationElementComponent {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
+  @ContentChild('navElementTemplate') navElementTemplate: TemplateRef<any>;
 
 }

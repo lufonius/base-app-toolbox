@@ -1,9 +1,9 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 @Component({
-  selector: 'bat-default-element',
+  selector: 'bat-webapp-nav-default-element',
   templateUrl: './default-element.component.html',
-  styleUrls: ['./default-element.component.css']
+  styleUrls: ['./default-element.component.scss']
 })
 export class BATDefaultElementComponent implements OnInit {
 
@@ -18,6 +18,10 @@ export class BATDefaultElementComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+  navigationElementClick() {
+    this.navigationElementClicked.emit();
   }
 
 }

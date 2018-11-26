@@ -1,3 +1,19 @@
-<p>
-  default-heading works!
-</p>
+<div
+  class="bat-navigation-header-container"
+  ngClass.lt-md="bat-navigation-header-container-lt-md"
+  fxLayout="row">
+  <div
+    *ngIf="isBackButtonVisible"
+    class="bat-navigation-header-back"
+    (click)="backClick()">
+    <mat-icon>arrow_back</mat-icon>
+  </div>
+  <div class="bat-navigation-header-title" fxLayoutAlign.gt-sm="end center" fxLayoutAlign.lt-md="start center" fxFlex="1 1 auto">
+    <span>{{headerTitle}}</span>
+  </div>
+  <div class="bat-navigation-header-dismiss">
+    <bat-close
+      [@closeVisibility]="visibilityState"
+      (closeClicked)="closeClick()"></bat-close>
+  </div>
+</div>

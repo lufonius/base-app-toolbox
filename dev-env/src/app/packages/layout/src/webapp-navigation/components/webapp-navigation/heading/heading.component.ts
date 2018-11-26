@@ -1,15 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, ContentChild, Input, OnInit, TemplateRef} from '@angular/core';
 
 @Component({
-  selector: 'app-heading',
+  selector: 'bat-webapp-nav-heading',
   templateUrl: './heading.component.html',
-  styleUrls: ['./heading.component.css']
+  styleUrls: ['./heading.component.scss']
 })
-export class BATHeadingComponent implements OnInit {
+export class BATWebappNavigationHeadingComponent {
+  @ContentChild('mobileHeaderTemplate') mobileHeaderTemplate: TemplateRef<any>;
+  @ContentChild('desktopHeaderTemplate') desktopHeaderTemplate: TemplateRef<any>;
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  @Input() headerTitle: string = "";
 }

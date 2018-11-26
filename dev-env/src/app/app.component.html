@@ -1,26 +1,41 @@
-<bat-webapp-nav [model]="model">
+<!--<bat-webapp-nav [model]="model">
   <bat-webapp-nav-heading [mediaQueries]="['sm']" title="this is some fancy title" (close)="closed()"></bat-webapp-nav-heading>
-  <!--non-default-->
   <bat-webapp-nav-heading [mediaQueries]="['xl']">
-    <!--overwrite default heading on xl...-->
+
     <ng-template batWebappNavHeading let-items let-parent let-model>
       {{parent.title}}
     </ng-template>
   </bat-webapp-nav-heading>
 
 
-  <!--$event contains the current item, the parent item-->
+
   <bat-webapp-nav-element (elementClicked)="elementClicked($event)">
     <ng-template batWebappNavElement let-item let-model>
-      <!--provide context to overwrite default element-->
+
     </ng-template>
   </bat-webapp-nav-element>
 
   <bat-webapp-nav-footer>
-    <!--content gets rendered here-->
+
     <ng-template batWebappNavFooter let-model>
       {{model.items.length}}
     </ng-template>
   </bat-webapp-nav-footer>
 
+</bat-webapp-nav>-->
+
+<!--provide api for external to input
+basenavitems,
+to change levels,
+events when closed got clicked, when back got clicked-->
+<bat-webapp-nav>
+  <bat-webapp-nav-heading headerTitle="hello"></bat-webapp-nav-heading>
+  <bat-webapp-nav-element>
+    <ng-template #navElementTemplate let-navItem="navItem">
+      this is a template: {{ navItem.id }}
+    </ng-template>
+  </bat-webapp-nav-element>
+  <bat-webapp-nav-footer>
+    this is a footer
+  </bat-webapp-nav-footer>
 </bat-webapp-nav>

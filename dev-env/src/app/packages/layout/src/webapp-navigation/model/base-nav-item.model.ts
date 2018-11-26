@@ -3,9 +3,11 @@ export interface BaseNavItem {
 
   route: string;
   level: number;
-  hidden: boolean;
 
   parentId: string;
   childrenIds: string[];
+
+  children: BaseNavItem[];
+  parent: BaseNavItem;
 }
 
