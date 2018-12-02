@@ -1,6 +1,6 @@
 # base-app-toolbox
 
-For each feature a separate branch.
+For each feature a separate dev branch.
 
 A toolbox made with ngrx and angular only to cover the basic needs of a common app
 
