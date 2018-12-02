@@ -10,15 +10,21 @@
   class="bat-navigation"
   ngClass.lt-md="bat-navigation-lt-md"
   ngClass.gt-sm="bat-navigation-gt-sm"
-  [@navigationLevels]="(isMobileMediaQuery$ | async) ? currentLevel : '1'"
+  [@navigationLevels]="(mediaQueryService.isMobileMediaQuery$ | async) ? currentLevel : '1'"
   [@visibility]="visibilityState">
   <!--[style.transform-origin]="getTransformOriginStyle(transformOrigin.x, transformOrigin.y)"-->
   <div ngClass.lt-md="bat-navigation-strawler-lt-md" ngClass.gt-sm="bat-navigation-strawler-gt-sm">
 
-    <div fxHide="true" fxShow.gt-sm="true">
+    <div *ngIf="!(mediaQueryService.isMobileMediaQuery$ | async)">
       <ng-container
-        batPlaceholder
-        [view]="generateDesktopHeadingView(currentLevel, viewModel['' + currentLevel].parentNavItem)">
+        batHeaderGenerator
+        [level]="currentLevel"
+        [mediaQuery]="getMediaQuery() | async"
+        [navItems]="viewModel[''+ currentLevel].navItems"
+        [parentNavItem]="viewModel[''+currentLevel].parentNavItem"
+        [viewModel]="viewModel"
+        [backClickFn]="wrap(goToPreviousLevel, level)"
+        [closeClickFn]="">
 
       </ng-container>
     </div>
@@ -33,12 +39,19 @@
         <div ngClass.gt-sm="bat-navigation-level-gt-sm"
              ngClass.lt-md="bat-navigation-level-lt-md">
 
-          <div fxHide="true" fxShow.lt-md="true">
+          <div *ngIf="(mediaQueryService.isMobileMediaQuery$ | async)">
             <ng-container
-              batPlaceholder
-              [view]="generateMobileHeadingView(level, viewModel[level].navItems, viewModel[level].parentNavItem, viewModel)">
+              batHeaderGenerator
+              [level]="level"
+              [mediaQuery]="getMediaQuery() | async"
+              [navItems]="viewModel[level].navItems"
+              [parentNavItem]="viewModel[level].parentNavItem"
+              [viewModel]="viewModel"
+              [backClickFn]="wrap(goToPreviousLevel,level)"
+              [closeClickFn]="">
 
             </ng-container>
+
           </div>
 
           <div ngClass.lt-md="bat-navigation-element-container-lt-md">
@@ -46,15 +59,14 @@
             <div  class="bat-navigation-element-divider"></div>
             <ng-container *ngFor="let navItem of viewModel[level].navItems">
 
-              <ng-container batPlaceholder [view]="generateNavElementView(navItem, level)"></ng-container>
-              <!--<bat-webapp-nav-default-element
-                [hasChildren]="navItem.children && navItem.children.length > 0"
-                [isActive]="navItem.isActive"
-                [title]="navItem.title"
-                [subtitle]="navItem.subtitle"
-                [route]="navItem.route"
-                (navigationElementClicked)="goToNextLevel(navItem, level);">
-              </bat-webapp-nav-default-element>-->
+              <ng-container
+                batNavElementGenerator
+                [mobileTemplate]="elementComponent.mobileTemplate"
+                [desktopTemplate]="elementComponent.desktopTemplate"
+                [mediaQuery]="getMediaQuery() | async"
+                [navItem]="navItem"
+                [level]="level"
+                [navElementClickFn]="wrap(goToNextLevel,navItem, level)"></ng-container>
 
               <div class="bat-navigation-element-divider"></div>
             </ng-container>

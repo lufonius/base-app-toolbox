@@ -13,7 +13,10 @@ import { FormsModule } from "@angular/forms";
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatIconModule } from '@angular/material';
 import { BATCommonModule } from "../../common/common.module";
-import { FooterComponent } from './webapp-navigation/components/webapp-navigation/footer/footer.component';
+import { BATWebappNavigationFooterComponent } from './webapp-navigation/components/webapp-navigation/footer/footer.component';
+import { BATHeaderGeneratorDirective } from './webapp-navigation/components/webapp-navigation/header-generator.directive';
+import { BATNavElementGeneratorDirective } from './webapp-navigation/components/webapp-navigation/nav-element-generator.directive';
+import { BATCoreModule } from "@base-app-toolbox/core";
 
 
 const WEBAPP_NAVIGATION_IMPORTS = [
@@ -22,18 +25,23 @@ const WEBAPP_NAVIGATION_IMPORTS = [
   BATDefaultHeadingComponent,
   BATWebappNavigationElementComponent,
   BATDefaultElementComponent,
-  BATCloseComponent
+  BATWebappNavigationFooterComponent,
+  BATCloseComponent,
+  BATHeaderGeneratorDirective,
+  BATNavElementGeneratorDirective
 ];
 
 const WEBAPP_NAVIGATION_EXPORTS = [
   BATWebappNavigationComponent,
   BATWebappNavigationHeadingComponent,
-  BATWebappNavigationElementComponent
+  BATWebappNavigationElementComponent,
+  BATWebappNavigationFooterComponent
 ];
 
 @NgModule({
  imports: [
    BATCommonModule,
+   BATCoreModule,
    FlexLayoutModule,
    CommonModule,
    FormsModule,
@@ -43,8 +51,7 @@ const WEBAPP_NAVIGATION_EXPORTS = [
    ...WEBAPP_NAVIGATION_EXPORTS
  ],
  declarations: [
-   ...WEBAPP_NAVIGATION_IMPORTS,
-   FooterComponent
+   ...WEBAPP_NAVIGATION_IMPORTS
  ],
   entryComponents: [
     BATDefaultHeadingComponent,

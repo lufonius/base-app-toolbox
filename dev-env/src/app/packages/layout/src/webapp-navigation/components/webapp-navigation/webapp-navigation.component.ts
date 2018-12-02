@@ -1,49 +1,19 @@
 import {
   Component,
-  ComponentFactoryResolver,
-  ComponentRef,
-  ContentChild,
-  Injector, Type,
-  ViewRef
+  ContentChild, EventEmitter, Input, Output,
 } from '@angular/core';
 import { ViewEncapsulation } from "@angular/core";
-import { BaseNavItem } from "../../model/base-nav-item.model";
+import { BATNavItemDenormalized } from "../../../../../core/src/navigation/model/base-nav-item-denormalized.model";
 import { animations } from './webapp-navigation-animations';
 import { BATWebappNavigationHeadingComponent } from "./heading/heading.component";
-import { BATDefaultHeadingComponent } from "./default-heading/default-heading.component";
-import { DefaultNavItem } from "../../model/default-nav-item.model";
-import {MediaChange, ObservableMedia} from "@angular/flex-layout";
-import {BehaviorSubject, Observable, Subject} from "rxjs/index";
-import {BATDefaultElementComponent} from "./default-element/default-element.component";
 import {BATWebappNavigationElementComponent} from "./element/element.component";
-
-export type BATWebappNavigationViewModel = {
-  [level: string]: { navItems: BaseNavItem[], parentNavItem: BaseNavItem }
-};
+import {BATMediaQueryService} from "@base-app-toolbox/core";
+import {Observable} from "rxjs/index";
+import {map} from "rxjs/operators";
+import {BATDefaultNavigationViewModel} from "../../../../../core/src/navigation/model/view-model.model";
 
 class basetemp {
-  public visibilityState: 'visible' | 'invisible' = 'invisible';
-  public isVisible: boolean = false;
 
-  public currentNavigationLevel: 'first' | 'second' = 'first';
-
-  public activeNavigationItemId: string = null;
-
-  public navigationHeaderTitle: string = "";
-
-  set visible(isVisible: boolean) {
-    if(isVisible === true) {
-      this.visibilityState = 'visible';
-    } else if(isVisible === false) {
-      this.visibilityState = 'invisible';
-    }
-
-    this.isVisible = isVisible;
-  }
-
-  get visible(): boolean {
-    return this.isVisible;
-  }
 
   public navItems = [
     {
@@ -150,34 +120,6 @@ class basetemp {
       ]
     }
   ];
-
-  public currentLevel = 1;
-  public viewModel = {
-    "1": { navItems: this.navItems, parentNavItem: null }
-  };
-
-
-  objectKeys = Object.keys;
-
-  constructor() {
-    this.visible = true;
-  }
-
-  goToNextLevel(navItem: BaseNavItem, level: string) {
-
-    if(navItem.children) {
-      let nextLevel = parseInt(level) + 1;
-      this.currentLevel = nextLevel;
-      this.viewModel[`${nextLevel}`] = { navItems: navItem.children, parentNavItem: navItem };
-      console.log(this.viewModel);
-    }
-  }
-
-  goToPreviousLevel(level: string) {
-    let previousLevel = parseInt(level) - 1;
-    this.currentLevel = previousLevel;
-    delete this.viewModel[level];
-  }
 }
 
 @Component({
@@ -187,121 +129,56 @@ class basetemp {
   encapsulation: ViewEncapsulation.None,
   animations: animations
 })
-export class BATWebappNavigationComponent extends basetemp {
+export class BATWebappNavigationComponent {
 
   @ContentChild(BATWebappNavigationHeadingComponent) headingComponent: BATWebappNavigationHeadingComponent;
   @ContentChild(BATWebappNavigationElementComponent) elementComponent: BATWebappNavigationElementComponent;
 
-  public isMobileMediaQuery$: Subject<boolean> = new BehaviorSubject(true);
+  @Input() viewModel: BATDefaultNavigationViewModel = {};
+  @Input() currentLevel: number = 1;
+  @Output() goingToNextLevel = new EventEmitter<{currentNavItem: BATNavItemDenormalized, currentLevel: number}>();
+  @Output() goingToPreviousLevel = new EventEmitter<{currentLevel: number}>();
 
-  constructor(
-    public injector: Injector,
-    public componentFactoryResolver: ComponentFactoryResolver,
-    public observableMedia$: ObservableMedia) {
-    super();
+  public objectKeys = Object.keys;
 
-    this.observableMedia$.subscribe((mediaQuery: MediaChange) => {
-      this.isMobileMediaQuery$.next(mediaQuery.mqAlias === 'xs' || mediaQuery.mqAlias === 'sm');
-    });
-  }
-  generateDesktopHeadingView(
-    level: number,
-    parentNavItem: BaseNavItem
-  ): ViewRef {
-    if(!this.headingComponent.desktopHeaderTemplate) {
-      let componentRef = this.generateDefaultHeadingComponent(
-        this.headingComponent.headerTitle,
-        false,
-        () => {},
-        () => {}
-      );
+  public visibilityState: 'visible' | 'invisible' = 'invisible';
+  public isVisible: boolean = false;
 
-      return componentRef.hostView;
+  @Input() set visible(isVisible: boolean) {
+    if(isVisible === true) {
+      this.visibilityState = 'visible';
+    } else if(isVisible === false) {
+      this.visibilityState = 'invisible';
     }
 
-    return this.headingComponent.desktopHeaderTemplate.createEmbeddedView({
-      levelevel: level,
-      parentNavItem: parentNavItem
-    });
+    this.isVisible = isVisible;
   }
 
-  generateMobileHeadingView(
-    level: string,
-    childNavItems: BaseNavItem[],
-    parentNavItem: BaseNavItem,
-    viewModel: BATWebappNavigationViewModel
-  ): ViewRef {
-
-    if(!this.headingComponent.mobileHeaderTemplate) {
-      let componentRef = this.generateDefaultHeadingComponent(
-        this.headingComponent.headerTitle,
-        false,
-        () => { this.goToPreviousLevel(level); },
-        () => {}
-      );
-
-      if(level !== '1') {
-        componentRef.instance.headerTitle = (<DefaultNavItem>parentNavItem).title;
-        componentRef.instance.isBackButtonVisible = true;
-      }
-
-      return componentRef.hostView;
-    }
-
-
-    return this.headingComponent.mobileHeaderTemplate.createEmbeddedView({
-      level: parseInt(level),
-      childNavItems: childNavItems,
-      parentNavItem: parentNavItem,
-      viewModel: viewModel
-    });
+  get visible(): boolean {
+    return this.isVisible;
   }
 
-  generateDefaultHeadingComponent(
-    headerTitle?: string,
-    isBackButtonVisible?: boolean,
-    backClickStrategy?: Function,
-    closeClickStrategy?: Function): ComponentRef<BATDefaultHeadingComponent> {
-    let componentRef = this.generateComponent(BATDefaultHeadingComponent);
-
-    componentRef.instance.headerTitle = headerTitle;
-    componentRef.instance.isBackButtonVisible = isBackButtonVisible;
-    componentRef.instance.backClicked.subscribe(() => { backClickStrategy(); });
-    componentRef.instance.closeClicked.subscribe(() => { closeClickStrategy(); });
-
-    return componentRef;
+  constructor(public mediaQueryService: BATMediaQueryService) {
+    this.visible = false;
   }
 
-  generateNavElementView(navItem: BaseNavItem, level: string): ViewRef {
-    if(!this.elementComponent.navElementTemplate) {
-      return this.generateDefaultNavElementView(<DefaultNavItem>navItem, level);
-    }
-
-    return this.elementComponent.navElementTemplate.createEmbeddedView({
-      navItem: navItem,
-      level: parseInt(level)
-    });
+  wrap(fn, ...params) {
+    //apply is needed since this would point to the anonymous function
+    return () => fn.apply(this, params);
   }
 
-  generateDefaultNavElementView(navItem: DefaultNavItem, level: string) {
-    let componentRef = this.generateComponent(BATDefaultElementComponent);
-
-    componentRef.instance.hasChildren = navItem.children.length > 0;
-    componentRef.instance.route = navItem.route;
-    componentRef.instance.title = navItem.title;
-    componentRef.instance.subtitle = navItem.subtitle;
-    componentRef.instance.navigationElementClicked.subscribe(() => {
-      this.goToNextLevel(navItem, level);
-    });
-
-    return componentRef.hostView;
+  getMediaQuery(): Observable<'mobile' | 'desktop'> {
+    return this.mediaQueryService.isMobileMediaQuery$.pipe(
+      map((isMobileMediaQuery: boolean) => (isMobileMediaQuery) ? 'mobile' : 'desktop')
+    )
   }
 
-  generateComponent<T>(type: Type<T>): ComponentRef<T> {
-    let factory = this.componentFactoryResolver.resolveComponentFactory(type);
-    let componentRef = factory.create(this.injector);
+  goToNextLevel(currentNavItem: BATNavItemDenormalized, currentLevel: number) {
+    this.goingToNextLevel.emit({ currentNavItem, currentLevel });
+  }
 
-    return componentRef;
+  goToPreviousLevel(currentLevel: number) {
+    this.goingToPreviousLevel.emit({ currentLevel });
   }
 }
 

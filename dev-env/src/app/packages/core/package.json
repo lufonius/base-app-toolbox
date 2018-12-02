@@ -1,0 +1,16 @@
+{
+  "name": "@base-app-toolbox/core",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "peerDependencies": {
+    "@angular/flex-layout": "^6.0.0-beta.18",
+    "@angular/core": "^6.0.3",
+    "rxjs": "^6.0.0"
+  }
+}

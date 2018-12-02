@@ -7,6 +7,7 @@ import {Component, ContentChild, OnInit, TemplateRef} from '@angular/core';
 })
 export class BATWebappNavigationElementComponent {
 
-  @ContentChild('navElementTemplate') navElementTemplate: TemplateRef<any>;
+  @ContentChild('mobileTemplate') mobileTemplate: TemplateRef<any>;
+  @ContentChild('desktopTemplate') desktopTemplate: TemplateRef<any>;
 
 }
