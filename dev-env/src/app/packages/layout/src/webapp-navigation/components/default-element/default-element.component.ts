@@ -5,7 +5,7 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
   templateUrl: './default-element.component.html',
   styleUrls: ['./default-element.component.scss']
 })
-export class BATDefaultElementComponent implements OnInit {
+export class BATWebappNavigationDefaultElementComponent implements OnInit {
 
   @Input() title: string = "title";
   @Input() subtitle: string = "subtitle";

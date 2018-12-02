@@ -1,16 +1,15 @@
 {
   "name": "@base-app-toolbox/layout",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "version": "0.0.0",
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "@ngrx/entity": "^6.1.2",
-    "@ngrx/store": "^6.1.2",
+  "peerDependencies": {
+    "@base-app-toolbox/core":"0.0.0",
+    "@angular/core": "^6.0.3",
+    "@angular/common": "^6.0.3",
+    "@angular/forms": "^6.0.3",
+    "@angular/material": "6.2.0",
+    "@angular/flex-layout": "^6.0.0-beta.15",
     "lodash": "^4.17.11"
   }
 }

@@ -15,7 +15,7 @@ import {ViewEncapsulation} from "@angular/core";
   encapsulation: ViewEncapsulation.None,
   animations: animations
 })
-export class BATDefaultHeadingComponent implements OnInit {
+export class BATWebappNavigationDefaultHeadingComponent implements OnInit {
 
   @Input() isBackButtonVisible: boolean = true;
   @Input() headerTitle: string = "";

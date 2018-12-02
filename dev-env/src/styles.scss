@@ -1,6 +1,6 @@
 @import '~@angular/material/theming';
-@import './app/packages/layout/src/webapp-navigation/components/webapp-navigation/webapp-navigation-theme';
-@import './app/packages/layout/src/webapp-navigation/components/webapp-navigation/default-element/default-element-theme';
+@import 'app/packages/layout/src/webapp-navigation/components/webapp-navigation-theme';
+@import 'app/packages/layout/src/webapp-navigation/components/default-element/default-element-theme';
 
 
 $primary-theme: (

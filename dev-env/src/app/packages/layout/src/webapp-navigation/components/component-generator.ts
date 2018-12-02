@@ -1,4 +1,9 @@
-import {ComponentFactoryResolver, ComponentRef, Injector, Type} from "@angular/core";
+import {
+  ComponentFactoryResolver,
+  ComponentRef,
+  Injector,
+  Type
+} from "@angular/core";
 
 export class BATComponentGenerator {
 

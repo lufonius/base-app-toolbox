@@ -1,20 +1,27 @@
 import {
   ChangeDetectorRef,
-  ComponentFactoryResolver, ComponentRef, Directive, Injector, Input, Optional, TemplateRef, ViewContainerRef,
+  ComponentFactoryResolver,
+  ComponentRef,
+  Directive,
+  Injector,
+  Input,
+  TemplateRef,
+  ViewContainerRef,
   ViewRef
 } from '@angular/core';
 import { BATLayoutGenerator } from "./layout-generator.interface";
-import {BATNavItemDenormalized} from "../../../../../core/src/navigation/model/base-nav-item-denormalized.model";
-import {BATDefaultNavItem} from "../../../../../core/src/navigation/model/default-nav-item.model";
-import {BATDefaultElementComponent} from "./default-element/default-element.component";
-import {BATComponentGenerator} from "./component-generator";
-import {BATDefaultHeadingComponent} from "./default-heading/default-heading.component";
-import {BATDefaultNavigationViewModel} from "./webapp-navigation.component";
+import {
+  BATDefaultNavItem,
+  BATNavItem,
+  BATDefaultNavigationViewModel
+} from "@base-app-toolbox/core";
+import { BATComponentGenerator } from "./component-generator";
+import { BATWebappNavigationDefaultHeadingComponent } from "./default-heading/default-heading.component";
 
 @Directive({
   selector: '[batHeaderGenerator]'
 })
-export class BATHeaderGeneratorDirective implements BATLayoutGenerator {
+export class BATWebappNavigationHeaderGeneratorDirective implements BATLayoutGenerator {
 
   @Input() mobileTemplate: TemplateRef<any>;
   @Input() desktopTemplate: TemplateRef<any>;
@@ -24,9 +31,9 @@ export class BATHeaderGeneratorDirective implements BATLayoutGenerator {
 
   @Input() headerTitle: string;
   @Input() level: string;
-  @Input() navItems: BATNavItemDenormalized[];
-  @Input() parentNavItem: BATNavItemDenormalized;
-  @Input() viewModel: BATWebappNavigationViewModel;
+  @Input() navItems: BATNavItem[];
+  @Input() parentNavItem: BATNavItem;
+  @Input() viewModel: BATDefaultNavigationViewModel;
   @Input() backClickFn: Function;
   @Input() closeClickFn: Function;
 
@@ -41,7 +48,6 @@ export class BATHeaderGeneratorDirective implements BATLayoutGenerator {
   }
 
   ngAfterViewInit() {
-    console.log(this);
     switch(this.mediaQuery) {
       case 'mobile': {
         this.insertView(this.generateMobileLayout());
@@ -82,7 +88,6 @@ export class BATHeaderGeneratorDirective implements BATLayoutGenerator {
   }
 
   generateMobileHeadingView(): ViewRef {
-
     if(!this.mobileTemplate) {
       let componentRef = this.generateDefaultHeadingComponent(false);
 
@@ -94,7 +99,6 @@ export class BATHeaderGeneratorDirective implements BATLayoutGenerator {
       return componentRef.hostView;
     }
 
-
     return this.mobileTemplate.createEmbeddedView({
       level: parseInt(this.level),
       navItems: this.navItems,
@@ -103,10 +107,8 @@ export class BATHeaderGeneratorDirective implements BATLayoutGenerator {
     });
   }
 
-
-
-  generateDefaultHeadingComponent(isBackButtonVisible: boolean): ComponentRef<BATDefaultHeadingComponent> {
-    let componentRef = this.componentGenerator.generateComponent(BATDefaultHeadingComponent);
+  generateDefaultHeadingComponent(isBackButtonVisible: boolean): ComponentRef<BATWebappNavigationDefaultHeadingComponent> {
+    let componentRef = this.componentGenerator.generateComponent(BATWebappNavigationDefaultHeadingComponent);
 
     componentRef.instance.headerTitle = this.headerTitle;
     componentRef.instance.isBackButtonVisible = isBackButtonVisible;

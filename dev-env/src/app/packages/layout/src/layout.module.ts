@@ -2,33 +2,32 @@ import { NgModule } from '@angular/core';
 
 import {
   BATWebappNavigationComponent,
-  BATDefaultElementComponent,
-  BATDefaultHeadingComponent,
+  BATWebappNavigationDefaultElementComponent,
+  BATWebappNavigationDefaultHeadingComponent,
   BATWebappNavigationElementComponent,
   BATWebappNavigationHeadingComponent,
-  BATCloseComponent
-} from './webapp-navigation/components/webapp-navigation';
+  BATWebappNavigationCloseComponent
+} from './webapp-navigation/components';
 import { CommonModule } from "@angular/common";
 import { FormsModule } from "@angular/forms";
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatIconModule } from '@angular/material';
-import { BATCommonModule } from "../../common/common.module";
-import { BATWebappNavigationFooterComponent } from './webapp-navigation/components/webapp-navigation/footer/footer.component';
-import { BATHeaderGeneratorDirective } from './webapp-navigation/components/webapp-navigation/header-generator.directive';
-import { BATNavElementGeneratorDirective } from './webapp-navigation/components/webapp-navigation/nav-element-generator.directive';
+import { BATWebappNavigationFooterComponent } from './webapp-navigation/components/footer/footer.component';
+import { BATWebappNavigationHeaderGeneratorDirective } from './webapp-navigation/components/header-generator.directive';
+import { BATWebappNavigationNavElementGeneratorDirective } from './webapp-navigation/components/nav-element-generator.directive';
 import { BATCoreModule } from "@base-app-toolbox/core";
 
 
 const WEBAPP_NAVIGATION_IMPORTS = [
   BATWebappNavigationComponent,
   BATWebappNavigationHeadingComponent,
-  BATDefaultHeadingComponent,
+  BATWebappNavigationDefaultHeadingComponent,
   BATWebappNavigationElementComponent,
-  BATDefaultElementComponent,
+  BATWebappNavigationDefaultElementComponent,
   BATWebappNavigationFooterComponent,
-  BATCloseComponent,
-  BATHeaderGeneratorDirective,
-  BATNavElementGeneratorDirective
+  BATWebappNavigationCloseComponent,
+  BATWebappNavigationHeaderGeneratorDirective,
+  BATWebappNavigationNavElementGeneratorDirective
 ];
 
 const WEBAPP_NAVIGATION_EXPORTS = [
@@ -38,9 +37,13 @@ const WEBAPP_NAVIGATION_EXPORTS = [
   BATWebappNavigationFooterComponent
 ];
 
+const ENTRY_COMPONENTS = [
+  BATWebappNavigationDefaultHeadingComponent,
+  BATWebappNavigationDefaultElementComponent
+];
+
 @NgModule({
  imports: [
-   BATCommonModule,
    BATCoreModule,
    FlexLayoutModule,
    CommonModule,
@@ -54,8 +57,7 @@ const WEBAPP_NAVIGATION_EXPORTS = [
    ...WEBAPP_NAVIGATION_IMPORTS
  ],
   entryComponents: [
-    BATDefaultHeadingComponent,
-    BATDefaultElementComponent
+    ...ENTRY_COMPONENTS
   ],
  providers: [],
 })

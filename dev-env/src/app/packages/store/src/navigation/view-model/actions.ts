@@ -1,6 +1,5 @@
 import { Action } from "@ngrx/store";
-import { BATNavItemDenormalized } from "@base-app-toolbox/core";
-import {BATNavItem} from "../../../../core/src/navigation/model/base-nav-item.model";
+import { BATNavItem } from "@base-app-toolbox/core";
 
 export enum BATWebappNavigationActionTypes {
   init = '[BATWebappNavigation] init',

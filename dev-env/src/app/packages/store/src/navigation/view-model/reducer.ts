@@ -1,10 +1,16 @@
-import { Action } from '@ngrx/store';
 import {
-  BATGoToNextLevelAction, BATGoToPreviousLevelAction, BATInitAction, BATViewModelActionUnion,
+  BATViewModelLogic,
+  BATDefaultNavigationViewModelLogic,
+  BATDefaultNavigationViewModel
+} from '@base-app-toolbox/core';
+
+import {
+  BATGoToNextLevelAction,
+  BATGoToPreviousLevelAction,
+  BATInitAction,
+  BATViewModelActionUnion,
   BATWebappNavigationActionTypes
 } from "./actions";
-import { BATDefaultNavigationViewModel } from "../../../../core/src/navigation/model/index";
-import { BATViewModelLogic, BATDefaultNavigationViewModelLogic } from '@base-app-toolbox/core';
 
 export interface State {
   viewModel: BATDefaultNavigationViewModel,

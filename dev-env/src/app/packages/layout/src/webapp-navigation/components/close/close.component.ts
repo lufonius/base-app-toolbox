@@ -5,7 +5,7 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
   templateUrl: './close.component.html',
   styleUrls: ['./close.component.scss']
 })
-export class BATCloseComponent {
+export class BATWebappNavigationCloseComponent {
 
   public visibilityState: 'visible' | 'invisible' = 'invisible';
 

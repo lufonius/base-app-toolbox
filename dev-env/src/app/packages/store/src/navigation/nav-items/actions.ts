@@ -1,6 +1,7 @@
 import {Action} from "@ngrx/store";
-import { BATNavItem } from "../../../../core/src/navigation/model/base-nav-item.model";
 import { Update } from "@ngrx/entity";
+
+import { BATNavItem } from "@base-app-toolbox/core";
 
 export enum BATNavItemActionTypes {
   LOAD_NAV_ITEMS = '[BATNavItem] Load NavItems',

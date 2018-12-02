@@ -1,17 +1,26 @@
 import {
-  ChangeDetectorRef, ComponentFactoryResolver, Directive, Injector, Input, Optional, TemplateRef, ViewContainerRef,
+  ChangeDetectorRef,
+  ComponentFactoryResolver,
+  Directive,
+  Injector,
+  Input,
+  TemplateRef,
+  ViewContainerRef,
   ViewRef
 } from '@angular/core';
+import {
+  BATNavItem,
+  BATDefaultNavItem
+} from "@base-app-toolbox/core";
+
+import { BATWebappNavigationDefaultElementComponent } from "./default-element/default-element.component";
+import { BATComponentGenerator } from "./component-generator";
 import { BATLayoutGenerator } from "./layout-generator.interface";
-import {BATNavItemDenormalized} from "../../../../../core/src/navigation/model/base-nav-item-denormalized.model";
-import {BATDefaultNavItem} from "../../../../../core/src/navigation/model/default-nav-item.model";
-import {BATDefaultElementComponent} from "./default-element/default-element.component";
-import {BATComponentGenerator} from "./component-generator";
 
 @Directive({
   selector: '[batNavElementGenerator]'
 })
-export class BATNavElementGeneratorDirective implements BATLayoutGenerator {
+export class BATWebappNavigationNavElementGeneratorDirective implements BATLayoutGenerator {
 
   @Input() public mobileTemplate: TemplateRef<any>;
   @Input() public desktopTemplate: TemplateRef<any>;
@@ -19,9 +28,13 @@ export class BATNavElementGeneratorDirective implements BATLayoutGenerator {
 
   public componentGenerator: BATComponentGenerator;
 
-  @Input() navItem: BATNavItemDenormalized;
+  @Input() navItem: BATNavItem;
   @Input() level: string;
   @Input() navElementClickFn: Function;
+
+  /** @internal */
+  private warnWrongDatatype = `There was no title property found in the navItem.
+      Make sure when you use the default nav element that you use the BATDefaultNavItem`;
 
   constructor(
     public vc: ViewContainerRef,
@@ -84,15 +97,25 @@ export class BATNavElementGeneratorDirective implements BATLayoutGenerator {
   }
 
   generateDefaultNavElementView(): ViewRef {
-    let componentRef = this.componentGenerator.generateComponent(BATDefaultElementComponent);
+    let componentRef = this.componentGenerator.generateComponent(BATWebappNavigationDefaultElementComponent);
 
-    componentRef.instance.hasChildren = !!this.navItem.children && this.navItem.children.length > 0;
+    componentRef.instance.hasChildren = this.navItem.childrenIds.length > 0;
     componentRef.instance.route = this.navItem.route;
-    componentRef.instance.title = (<BATDefaultNavItem>this.navItem).title;
-    componentRef.instance.subtitle = (<BATDefaultNavItem>this.navItem).subtitle;
     componentRef.instance.navigationElementClicked.subscribe(() => {
       this.navElementClickFn();
     });
+
+    if(!!(<any>this.navItem).title) {
+      componentRef.instance.title = (<BATDefaultNavItem>this.navItem).title;
+    } else {
+      console.warn(this.warnWrongDatatype);
+    }
+
+    if(!!(<any>this.navItem).subtitle) {
+      componentRef.instance.subtitle = (<BATDefaultNavItem>this.navItem).subtitle;
+    } else {
+      console.warn(this.warnWrongDatatype);
+    }
 
     return componentRef.hostView;
   }

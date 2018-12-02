@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { BATPlaceholderDirective } from './src/placeholder.directive';
+import { BATPlaceholderDirective } from './placeholder.directive';
 
 @NgModule({
  imports: [],

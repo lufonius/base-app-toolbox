@@ -1,6 +1,12 @@
-import {createEntityAdapter, EntityState} from "@ngrx/entity";
-import { BATNavItem } from "../../../../core/src/navigation/model/base-nav-item.model";
-import {BATNavItemActionsUnion, BATNavItemActionTypes} from "./actions";
+import {
+  createEntityAdapter,
+  EntityState
+} from "@ngrx/entity";
+import { BATNavItem } from "@base-app-toolbox/core";
+import {
+  BATNavItemActionsUnion,
+  BATNavItemActionTypes
+} from "./actions";
 
 export const adapter = createEntityAdapter<BATNavItem>();
 

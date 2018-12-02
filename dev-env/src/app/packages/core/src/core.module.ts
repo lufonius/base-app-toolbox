@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { BATMediaQueryService } from "./src/media-query.service";
+import { BATMediaQueryService } from "./media-query.service";
 
 @NgModule({
  imports: [],
