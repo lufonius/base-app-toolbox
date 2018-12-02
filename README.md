@@ -1,16 +1,20 @@
 # base-app-toolbox
-A toolbox made with ngrx only to cover the basic needs of a common app
+A toolbox made with ngrx and angular only to cover the basic needs of a common app
 
-The goal is to have a package which exposes the actions, selectors, reducers, entities and adapters for common functionality of an app. It works as a layer between the backend and the frontend. With the adapter pattern it decouples the data structure which comes from the backend from the store.
+The goal is to have multiple packages. The core package defines entities (might be moved to the common package ... lets see), the layout package which includes UI components, the common package which include often used UI components or directives used among the other packages and the store package, which includes actions and reducer functions.
 
-For example:
-- Logic for a multi-level navigation
+- Reusable logic for modifying the viewmodel for navigations
+- Store for modifying the viewmodel for navigations
+- Webapp Navigation as a UI component, highly customizeable and responsive
 - Notifications
 - Error Handling, bases on Notification
 - User management, including roles, permissions per role and specific permissions per user, which overwrite the roles permission
 
 The packages should be available on npm, structured like this:
 - @ngrx-base-toolbox/
-  - notifications
-  - error-handling
-  - user-management
+  - core
+  - common
+  - layout
+  - store
+  
+Structured this way, a developer doesn't have to include the ngrx dependency if he decides to use the ui components without a store.
