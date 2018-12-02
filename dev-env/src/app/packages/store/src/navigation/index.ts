@@ -1,3 +1,5 @@
-export * from './view-model/actions';
-export * from './nav-items/nav-items.reducer';
-export * from './selectors';
+import * as fromNavItems from './nav-items';
+import * as fromViewModel from './view-model';
+
+export { fromNavItems };
+export { fromViewModel };
