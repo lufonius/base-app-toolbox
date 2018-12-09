@@ -10,7 +10,7 @@ export class BATDefaultNavigationViewModelLogic implements BATViewModelLogic {
     navItems: { [id: string]: BATNavItem }
   ) {
     let viewModel = {};
-    //the navItems with no parentId are the highest in the hierarchy
+    //the fromNavItems with no parentId are the highest in the hierarchy
     let firstLevelNavItems = this.getNavItemsByParentIdNull(navItems);
     viewModel['1'] = { navItems: _.cloneDeep(firstLevelNavItems), parentNavItem: null };
 

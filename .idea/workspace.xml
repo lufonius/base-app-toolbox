@@ -2,67 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="769f0a93-8bb0-4fda-9d50-9314259d2353" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/dev-env/src/app/packages/layout/public_api.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/dev-env/src/app/packages/layout/src/index.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/dev-env/src/app/packages/layout/src/webapp-navigation/components/element/element.component.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/dev-env/src/app/packages/layout/src/webapp-navigation/components/footer/footer.component.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/dev-env/src/app/packages/layout/src/webapp-navigation/components/heading/heading.component.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/dev-env/src/app/packages/layout/src/webapp-navigation/components/index.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/dev-env/src/app/packages/layout/src/webapp-navigation/index.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/dev-env/src/app/packages/store/index.ts" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/dev-env/src/app/implementation/store/index.ts" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/dev-env/src/app/implementation/store/navigation/index.ts" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/dev-env/src/app/implementation/store/navigation/module.ts" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/dev-env/src/app/implementation/store/navigation/selectors.ts" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/dev-env/src/app/implementation/webapp-navigation/webapp-navigation.component.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/dev-env/src/app/implementation/webapp-navigation/webapp-navigation.component.scss" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/dev-env/src/app/implementation/webapp-navigation/webapp-navigation.component.spec.ts" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/dev-env/src/app/implementation/webapp-navigation/webapp-navigation.component.ts" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/dev-env/src/app/implementation/webapp-navigation/webapp-navigation.module.ts" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/dev-env/src/app/app.component.html" afterPath="$PROJECT_DIR$/dev-env/src/app/app.component.html" />
       <change beforePath="$PROJECT_DIR$/dev-env/src/app/app.component.ts" afterPath="$PROJECT_DIR$/dev-env/src/app/app.component.ts" />
-      <change beforePath="$PROJECT_DIR$/dev-env/src/app/packages/common/common.module.ts" afterPath="$PROJECT_DIR$/dev-env/src/app/packages/common/src/common.module.ts" />
-      <change beforePath="$PROJECT_DIR$/dev-env/src/app/packages/common/package.json" afterPath="$PROJECT_DIR$/dev-env/src/app/packages/common/package.json" />
-      <change beforePath="$PROJECT_DIR$/dev-env/src/app/packages/core/core.module.ts" afterPath="$PROJECT_DIR$/dev-env/src/app/packages/core/src/core.module.ts" />
-      <change beforePath="$PROJECT_DIR$/dev-env/src/app/packages/core/package.json" afterPath="$PROJECT_DIR$/dev-env/src/app/packages/core/package.json" />
-      <change beforePath="$PROJECT_DIR$/dev-env/src/app/packages/core/public_api.ts" afterPath="$PROJECT_DIR$/dev-env/src/app/packages/core/public_api.ts" />
-      <change beforePath="$PROJECT_DIR$/dev-env/src/app/packages/core/src/navigation/model/index.ts" afterPath="$PROJECT_DIR$/dev-env/src/app/packages/core/src/navigation/model/index.ts" />
+      <change beforePath="$PROJECT_DIR$/dev-env/src/app/app.module.ts" afterPath="$PROJECT_DIR$/dev-env/src/app/app.module.ts" />
+      <change beforePath="$PROJECT_DIR$/dev-env/src/app/packages/core/src/navigation/logic/view-model-logic.ts" afterPath="$PROJECT_DIR$/dev-env/src/app/packages/core/src/navigation/logic/view-model-logic.ts" />
+      <change beforePath="$PROJECT_DIR$/dev-env/src/app/packages/layout/package-lock.json" afterPath="$PROJECT_DIR$/dev-env/src/app/packages/layout/package-lock.json" />
       <change beforePath="$PROJECT_DIR$/dev-env/src/app/packages/layout/package.json" afterPath="$PROJECT_DIR$/dev-env/src/app/packages/layout/package.json" />
-      <change beforePath="$PROJECT_DIR$/dev-env/src/app/packages/layout/src/layout.module.ts" afterPath="$PROJECT_DIR$/dev-env/src/app/packages/layout/src/layout.module.ts" />
-      <change beforePath="$PROJECT_DIR$/dev-env/src/app/packages/layout/src/public_api.ts" afterPath="$PROJECT_DIR$/dev-env/src/app/packages/common/public_api.ts" />
-      <change beforePath="$PROJECT_DIR$/dev-env/src/app/packages/layout/src/webapp-navigation/components/webapp-navigation/_webapp-navigation-theme.scss" afterPath="$PROJECT_DIR$/dev-env/src/app/packages/layout/src/webapp-navigation/components/_webapp-navigation-theme.scss" />
-      <change beforePath="$PROJECT_DIR$/dev-env/src/app/packages/layout/src/webapp-navigation/components/webapp-navigation/close/close.component.html" afterPath="$PROJECT_DIR$/dev-env/src/app/packages/layout/src/webapp-navigation/components/close/close.component.html" />
-      <change beforePath="$PROJECT_DIR$/dev-env/src/app/packages/layout/src/webapp-navigation/components/webapp-navigation/close/close.component.scss" afterPath="$PROJECT_DIR$/dev-env/src/app/packages/layout/src/webapp-navigation/components/close/close.component.scss" />
-      <change beforePath="$PROJECT_DIR$/dev-env/src/app/packages/layout/src/webapp-navigation/components/webapp-navigation/close/close.component.ts" afterPath="$PROJECT_DIR$/dev-env/src/app/packages/layout/src/webapp-navigation/components/close/close.component.ts" />
-      <change beforePath="$PROJECT_DIR$/dev-env/src/app/packages/layout/src/webapp-navigation/components/webapp-navigation/component-generator.ts" afterPath="$PROJECT_DIR$/dev-env/src/app/packages/layout/src/webapp-navigation/components/component-generator.ts" />
-      <change beforePath="$PROJECT_DIR$/dev-env/src/app/packages/layout/src/webapp-navigation/components/webapp-navigation/default-element/_default-element-theme.scss" afterPath="$PROJECT_DIR$/dev-env/src/app/packages/layout/src/webapp-navigation/components/default-element/_default-element-theme.scss" />
-      <change beforePath="$PROJECT_DIR$/dev-env/src/app/packages/layout/src/webapp-navigation/components/webapp-navigation/default-element/default-element.component.html" afterPath="$PROJECT_DIR$/dev-env/src/app/packages/layout/src/webapp-navigation/components/default-element/default-element.component.html" />
-      <change beforePath="$PROJECT_DIR$/dev-env/src/app/packages/layout/src/webapp-navigation/components/webapp-navigation/default-element/default-element.component.scss" afterPath="$PROJECT_DIR$/dev-env/src/app/packages/layout/src/webapp-navigation/components/default-element/default-element.component.scss" />
-      <change beforePath="$PROJECT_DIR$/dev-env/src/app/packages/layout/src/webapp-navigation/components/webapp-navigation/default-element/default-element.component.ts" afterPath="$PROJECT_DIR$/dev-env/src/app/packages/layout/src/webapp-navigation/components/default-element/default-element.component.ts" />
-      <change beforePath="$PROJECT_DIR$/dev-env/src/app/packages/layout/src/webapp-navigation/components/webapp-navigation/default-heading/default-heading-animations.ts" afterPath="$PROJECT_DIR$/dev-env/src/app/packages/layout/src/webapp-navigation/components/default-heading/default-heading-animations.ts" />
-      <change beforePath="$PROJECT_DIR$/dev-env/src/app/packages/layout/src/webapp-navigation/components/webapp-navigation/default-heading/default-heading.component.html" afterPath="$PROJECT_DIR$/dev-env/src/app/packages/layout/src/webapp-navigation/components/default-heading/default-heading.component.html" />
-      <change beforePath="$PROJECT_DIR$/dev-env/src/app/packages/layout/src/webapp-navigation/components/webapp-navigation/default-heading/default-heading.component.scss" afterPath="$PROJECT_DIR$/dev-env/src/app/packages/layout/src/webapp-navigation/components/default-heading/default-heading.component.scss" />
-      <change beforePath="$PROJECT_DIR$/dev-env/src/app/packages/layout/src/webapp-navigation/components/webapp-navigation/default-heading/default-heading.component.ts" afterPath="$PROJECT_DIR$/dev-env/src/app/packages/layout/src/webapp-navigation/components/default-heading/default-heading.component.ts" />
-      <change beforePath="$PROJECT_DIR$/dev-env/src/app/packages/layout/src/webapp-navigation/components/webapp-navigation/element/element.component.html" afterPath="$PROJECT_DIR$/dev-env/src/app/packages/layout/src/webapp-navigation/components/element/element.component.html" />
-      <change beforePath="$PROJECT_DIR$/dev-env/src/app/packages/layout/src/webapp-navigation/components/webapp-navigation/element/element.component.scss" afterPath="$PROJECT_DIR$/dev-env/src/app/packages/layout/index.ts" />
-      <change beforePath="$PROJECT_DIR$/dev-env/src/app/packages/layout/src/webapp-navigation/components/webapp-navigation/element/element.component.ts" afterPath="$PROJECT_DIR$/dev-env/src/app/packages/layout/src/webapp-navigation/components/element/element.component.ts" />
-      <change beforePath="$PROJECT_DIR$/dev-env/src/app/packages/layout/src/webapp-navigation/components/webapp-navigation/footer/footer.component.css" afterPath="$PROJECT_DIR$/dev-env/src/app/packages/common/src/index.ts" />
-      <change beforePath="$PROJECT_DIR$/dev-env/src/app/packages/layout/src/webapp-navigation/components/webapp-navigation/footer/footer.component.html" afterPath="$PROJECT_DIR$/dev-env/src/app/packages/layout/src/webapp-navigation/components/footer/footer.component.html" />
-      <change beforePath="$PROJECT_DIR$/dev-env/src/app/packages/layout/src/webapp-navigation/components/webapp-navigation/footer/footer.component.spec.ts" afterPath="$PROJECT_DIR$/dev-env/src/app/packages/layout/src/webapp-navigation/components/footer/footer.component.spec.ts" />
-      <change beforePath="$PROJECT_DIR$/dev-env/src/app/packages/layout/src/webapp-navigation/components/webapp-navigation/footer/footer.component.ts" afterPath="$PROJECT_DIR$/dev-env/src/app/packages/layout/src/webapp-navigation/components/footer/footer.component.ts" />
-      <change beforePath="$PROJECT_DIR$/dev-env/src/app/packages/layout/src/webapp-navigation/components/webapp-navigation/header-generator.directive.spec.ts" afterPath="$PROJECT_DIR$/dev-env/src/app/packages/layout/src/webapp-navigation/components/header-generator.directive.spec.ts" />
-      <change beforePath="$PROJECT_DIR$/dev-env/src/app/packages/layout/src/webapp-navigation/components/webapp-navigation/header-generator.directive.ts" afterPath="$PROJECT_DIR$/dev-env/src/app/packages/layout/src/webapp-navigation/components/header-generator.directive.ts" />
-      <change beforePath="$PROJECT_DIR$/dev-env/src/app/packages/layout/src/webapp-navigation/components/webapp-navigation/heading/heading.component.html" afterPath="$PROJECT_DIR$/dev-env/src/app/packages/layout/src/webapp-navigation/components/heading/heading.component.html" />
-      <change beforePath="$PROJECT_DIR$/dev-env/src/app/packages/layout/src/webapp-navigation/components/webapp-navigation/heading/heading.component.scss" afterPath="$PROJECT_DIR$/dev-env/src/app/packages/common/index.ts" />
-      <change beforePath="$PROJECT_DIR$/dev-env/src/app/packages/layout/src/webapp-navigation/components/webapp-navigation/heading/heading.component.ts" afterPath="$PROJECT_DIR$/dev-env/src/app/packages/layout/src/webapp-navigation/components/heading/heading.component.ts" />
-      <change beforePath="$PROJECT_DIR$/dev-env/src/app/packages/layout/src/webapp-navigation/components/webapp-navigation/index.ts" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/dev-env/src/app/packages/layout/src/webapp-navigation/components/webapp-navigation/layout-generator.interface.ts" afterPath="$PROJECT_DIR$/dev-env/src/app/packages/layout/src/webapp-navigation/components/layout-generator.interface.ts" />
-      <change beforePath="$PROJECT_DIR$/dev-env/src/app/packages/layout/src/webapp-navigation/components/webapp-navigation/nav-element-generator.directive.spec.ts" afterPath="$PROJECT_DIR$/dev-env/src/app/packages/layout/src/webapp-navigation/components/nav-element-generator.directive.spec.ts" />
-      <change beforePath="$PROJECT_DIR$/dev-env/src/app/packages/layout/src/webapp-navigation/components/webapp-navigation/nav-element-generator.directive.ts" afterPath="$PROJECT_DIR$/dev-env/src/app/packages/layout/src/webapp-navigation/components/nav-element-generator.directive.ts" />
-      <change beforePath="$PROJECT_DIR$/dev-env/src/app/packages/layout/src/webapp-navigation/components/webapp-navigation/webapp-navigation-animations.ts" afterPath="$PROJECT_DIR$/dev-env/src/app/packages/layout/src/webapp-navigation/components/webapp-navigation-animations.ts" />
-      <change beforePath="$PROJECT_DIR$/dev-env/src/app/packages/layout/src/webapp-navigation/components/webapp-navigation/webapp-navigation.component.html" afterPath="$PROJECT_DIR$/dev-env/src/app/packages/layout/src/webapp-navigation/components/webapp-navigation.component.html" />
-      <change beforePath="$PROJECT_DIR$/dev-env/src/app/packages/layout/src/webapp-navigation/components/webapp-navigation/webapp-navigation.component.scss" afterPath="$PROJECT_DIR$/dev-env/src/app/packages/layout/src/webapp-navigation/components/webapp-navigation.component.scss" />
-      <change beforePath="$PROJECT_DIR$/dev-env/src/app/packages/layout/src/webapp-navigation/components/webapp-navigation/webapp-navigation.component.ts" afterPath="$PROJECT_DIR$/dev-env/src/app/packages/layout/src/webapp-navigation/components/webapp-navigation.component.ts" />
+      <change beforePath="$PROJECT_DIR$/dev-env/src/app/packages/store/package-lock.json" afterPath="$PROJECT_DIR$/dev-env/src/app/packages/store/package-lock.json" />
       <change beforePath="$PROJECT_DIR$/dev-env/src/app/packages/store/package.json" afterPath="$PROJECT_DIR$/dev-env/src/app/packages/store/package.json" />
-      <change beforePath="$PROJECT_DIR$/dev-env/src/app/packages/store/src/index.ts" afterPath="$PROJECT_DIR$/dev-env/src/app/packages/store/src/index.ts" />
+      <change beforePath="$PROJECT_DIR$/dev-env/src/app/packages/store/src/navigation/index.ts" afterPath="$PROJECT_DIR$/dev-env/src/app/packages/store/src/navigation/index.ts" />
       <change beforePath="$PROJECT_DIR$/dev-env/src/app/packages/store/src/navigation/nav-items/actions.ts" afterPath="$PROJECT_DIR$/dev-env/src/app/packages/store/src/navigation/nav-items/actions.ts" />
       <change beforePath="$PROJECT_DIR$/dev-env/src/app/packages/store/src/navigation/nav-items/reducer.ts" afterPath="$PROJECT_DIR$/dev-env/src/app/packages/store/src/navigation/nav-items/reducer.ts" />
+      <change beforePath="$PROJECT_DIR$/dev-env/src/app/packages/store/src/navigation/nav-items/selectors.ts" afterPath="$PROJECT_DIR$/dev-env/src/app/packages/store/src/navigation/nav-items/selectors.ts" />
       <change beforePath="$PROJECT_DIR$/dev-env/src/app/packages/store/src/navigation/view-model/actions.ts" afterPath="$PROJECT_DIR$/dev-env/src/app/packages/store/src/navigation/view-model/actions.ts" />
       <change beforePath="$PROJECT_DIR$/dev-env/src/app/packages/store/src/navigation/view-model/reducer.ts" afterPath="$PROJECT_DIR$/dev-env/src/app/packages/store/src/navigation/view-model/reducer.ts" />
-      <change beforePath="$PROJECT_DIR$/dev-env/src/app/packages/store/src/public_api.ts" afterPath="$PROJECT_DIR$/dev-env/src/app/packages/store/public_api.ts" />
-      <change beforePath="$PROJECT_DIR$/dev-env/src/styles.scss" afterPath="$PROJECT_DIR$/dev-env/src/styles.scss" />
+      <change beforePath="$PROJECT_DIR$/dev-env/src/app/packages/store/src/navigation/view-model/selectors.ts" afterPath="$PROJECT_DIR$/dev-env/src/app/packages/store/src/navigation/view-model/selectors.ts" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -76,13 +40,78 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="actions.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dev-env/src/app/packages/store/src/navigation/view-model/actions.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="5" column="11" lean-forward="true" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="selectors.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dev-env/src/app/implementation/store/navigation/selectors.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="600">
+              <caret line="40" column="20" lean-forward="true" selection-start-line="40" selection-start-column="20" selection-end-line="40" selection-end-column="20" />
+              <folding>
+                <element signature="e#0#176#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="webapp-navigation.component.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dev-env/src/app/implementation/webapp-navigation/webapp-navigation.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="22" lean-forward="false" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="layout.module.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dev-env/src/app/packages/layout/src/layout.module.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-45">
+              <caret line="33" column="22" lean-forward="false" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="webapp-navigation.component.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dev-env/src/app/packages/layout/src/webapp-navigation/components/webapp-navigation.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="33" column="28" lean-forward="false" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="28" />
+            <state relative-caret-position="711">
+              <caret line="75" column="46" lean-forward="false" selection-start-line="75" selection-start-column="46" selection-end-line="75" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="webapp-navigation.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dev-env/src/app/implementation/webapp-navigation/webapp-navigation.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="139">
+              <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="30" />
               <folding>
-                <element signature="e#0#96#0" expanded="true" />
+                <element signature="e#0#50#0" expanded="true" />
+                <element signature="e#928#1673#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="webapp-navigation.module.ts" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/dev-env/src/app/implementation/webapp-navigation/webapp-navigation.module.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" column="28" lean-forward="false" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -91,96 +120,31 @@
       <file leaf-file-name="app.component.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dev-env/src/app/app.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="373">
-              <caret line="112" column="4" lean-forward="false" selection-start-line="112" selection-start-column="4" selection-end-line="112" selection-end-column="4" />
-              <folding>
-                <element signature="e#390#2008#0" expanded="false" />
-                <element signature="e#2193#2591#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="120">
+              <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="layout-generator.interface.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dev-env/src/app/packages/layout/src/webapp-navigation/components/layout-generator.interface.ts">
+      <file leaf-file-name="app.component.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dev-env/src/app/app.component.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.module.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dev-env/src/app/app.module.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="211">
+              <caret line="15" column="20" lean-forward="false" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
               <folding>
                 <element signature="e#0#58#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.component.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/dev-env/src/app/app.component.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="56" lean-forward="true" selection-start-line="3" selection-start-column="56" selection-end-line="3" selection-end-column="56" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="header-generator.directive.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dev-env/src/app/packages/layout/src/webapp-navigation/components/header-generator.directive.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="735">
-              <caret line="49" column="21" lean-forward="false" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="21" />
-              <folding>
-                <element signature="e#0#176#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="component-generator.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dev-env/src/app/packages/layout/src/webapp-navigation/components/component-generator.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dev-env/src/app/packages/layout/index.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="27" lean-forward="false" selection-start-line="0" selection-start-column="27" selection-end-line="0" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dev-env/src/app/packages/layout/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="30" lean-forward="true" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dev-env/src/app/packages/store/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="3" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/package/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -239,14 +203,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/dev-env/src/app/packages/core/src/webapp-navigation/model/base-nav-item-composite.model.ts" />
-        <option value="$PROJECT_DIR$/dev-env/src/app/packages/layout/src/webapp-navigation/components/webapp-navigation/webapp-navigation.component.ts" />
-        <option value="$PROJECT_DIR$/dev-env/src/app/packages/store/src/webapp-navigation/actions.ts" />
-        <option value="$PROJECT_DIR$/dev-env/src/app/packages/core/src/webapp-navigation/logic/base-nav-item-denormalized-factory.ts" />
-        <option value="$PROJECT_DIR$/dev-env/src/app/packages/store/src/webapp-navigation/reducer.ts" />
-        <option value="$PROJECT_DIR$/dev-env/src/app/packages/store/src/navigation/nav-items/nav-items-reducer.ts" />
-        <option value="$PROJECT_DIR$/dev-env/src/app/packages/store/src/navigation/nav-items/nav-items.reducer.ts" />
-        <option value="$PROJECT_DIR$/dev-env/src/app/packages/store/src/navigation/view-model/view-model.reducer.ts" />
         <option value="$PROJECT_DIR$/dev-env/src/app/packages/store/src/navigation/reducer.ts" />
         <option value="$PROJECT_DIR$/dev-env/src/app/packages/store/src/navigation/actions.ts" />
         <option value="$PROJECT_DIR$/dev-env/src/app/packages/core/src/webapp-navigation/model/base-nav-item.model.ts" />
@@ -258,11 +214,7 @@
         <option value="$PROJECT_DIR$/dev-env/src/app/packages/core/src/navigation/model/base-nav-item-denormalized.model.ts" />
         <option value="$PROJECT_DIR$/dev-env/src/app/packages/core/src/navigation/model/default-nav-item.model.ts" />
         <option value="$PROJECT_DIR$/dev-env/src/app/packages/core/src/navigation/model/view-model.model.ts" />
-        <option value="$PROJECT_DIR$/dev-env/src/app/packages/store/src/navigation/view-model/selectors.ts" />
-        <option value="$PROJECT_DIR$/dev-env/src/app/packages/store/src/navigation/nav-items/selectors.ts" />
         <option value="$PROJECT_DIR$/dev-env/src/app/packages/store/src/navigation/view-model/index.ts" />
-        <option value="$PROJECT_DIR$/dev-env/src/app/packages/store/src/navigation/nav-items/index.ts" />
-        <option value="$PROJECT_DIR$/dev-env/src/app/packages/store/src/navigation/index.ts" />
         <option value="$PROJECT_DIR$/dev-env/src/app/packages/store/src/public_api.ts" />
         <option value="$PROJECT_DIR$/dev-env/src/app/packages/store/src/index.ts" />
         <option value="$PROJECT_DIR$/dev-env/src/app/packages/store/public_api.ts" />
@@ -278,18 +230,30 @@
         <option value="$PROJECT_DIR$/dev-env/src/app/packages/common/package.json" />
         <option value="$PROJECT_DIR$/dev-env/src/app/packages/core/package.json" />
         <option value="$PROJECT_DIR$/dev-env/src/app/packages/core/src/navigation/model/index.ts" />
-        <option value="$PROJECT_DIR$/dev-env/src/app/packages/store/src/navigation/nav-items/actions.ts" />
-        <option value="$PROJECT_DIR$/dev-env/src/app/packages/store/src/navigation/nav-items/reducer.ts" />
-        <option value="$PROJECT_DIR$/dev-env/src/app/packages/store/src/navigation/view-model/actions.ts" />
-        <option value="$PROJECT_DIR$/dev-env/src/app/packages/store/src/navigation/view-model/reducer.ts" />
         <option value="$PROJECT_DIR$/dev-env/src/app/packages/layout/src/webapp-navigation/components/webapp-navigation.component.ts" />
-        <option value="$PROJECT_DIR$/dev-env/src/app/app.component.ts" />
         <option value="$PROJECT_DIR$/dev-env/src/app/packages/layout/src/webapp-navigation/components/nav-element-generator.directive.ts" />
         <option value="$PROJECT_DIR$/dev-env/src/app/packages/layout/src/webapp-navigation/components/header-generator.directive.ts" />
         <option value="$PROJECT_DIR$/dev-env/src/app/packages/layout/src/webapp-navigation/components/component-generator.ts" />
         <option value="$PROJECT_DIR$/dev-env/src/app/packages/layout/package.json" />
         <option value="$PROJECT_DIR$/dev-env/src/app/packages/store/package.json" />
+        <option value="$PROJECT_DIR$/dev-env/src/app/implementation/store/navigation/index.ts" />
+        <option value="$PROJECT_DIR$/dev-env/src/app/implementation/store/index.ts" />
+        <option value="$PROJECT_DIR$/dev-env/src/app/app.component.ts" />
+        <option value="$PROJECT_DIR$/dev-env/src/app/packages/store/src/navigation/nav-items/index.ts" />
+        <option value="$PROJECT_DIR$/dev-env/src/app/packages/store/src/navigation/nav-items/actions.ts" />
+        <option value="$PROJECT_DIR$/dev-env/src/app/packages/store/src/navigation/view-model/actions.ts" />
+        <option value="$PROJECT_DIR$/dev-env/src/app/packages/store/src/navigation/index.ts" />
+        <option value="$PROJECT_DIR$/dev-env/src/app/packages/store/src/navigation/nav-items/reducer.ts" />
+        <option value="$PROJECT_DIR$/dev-env/src/app/packages/store/src/navigation/view-model/reducer.ts" />
+        <option value="$PROJECT_DIR$/dev-env/src/app/implementation/store/navigation/module.ts" />
+        <option value="$PROJECT_DIR$/dev-env/src/app/packages/store/src/navigation/nav-items/selectors.ts" />
+        <option value="$PROJECT_DIR$/dev-env/src/app/packages/store/src/navigation/view-model/selectors.ts" />
+        <option value="$PROJECT_DIR$/dev-env/src/app/implementation/store/navigation/selectors.ts" />
+        <option value="$PROJECT_DIR$/dev-env/src/app/implementation/webapp-navigation/webapp-navigation.component.html" />
+        <option value="$PROJECT_DIR$/dev-env/src/app/app.module.ts" />
+        <option value="$PROJECT_DIR$/dev-env/src/app/implementation/webapp-navigation/webapp-navigation.component.ts" />
         <option value="$PROJECT_DIR$/dev-env/src/app/app.component.html" />
+        <option value="$PROJECT_DIR$/dev-env/src/app/implementation/webapp-navigation/webapp-navigation.module.ts" />
       </list>
     </option>
   </component>
@@ -325,7 +289,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -358,7 +321,7 @@
               <item name="dev-env" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="packages" type="462c0819:PsiDirectoryNode" />
+              <item name="implementation" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="base-app-toolbox" type="b2602c69:ProjectViewProjectNode" />
@@ -366,28 +329,7 @@
               <item name="dev-env" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="packages" type="462c0819:PsiDirectoryNode" />
-              <item name="layout" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="base-app-toolbox" type="b2602c69:ProjectViewProjectNode" />
-              <item name="base-app-toolbox" type="462c0819:PsiDirectoryNode" />
-              <item name="dev-env" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="packages" type="462c0819:PsiDirectoryNode" />
-              <item name="layout" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="base-app-toolbox" type="b2602c69:ProjectViewProjectNode" />
-              <item name="base-app-toolbox" type="462c0819:PsiDirectoryNode" />
-              <item name="dev-env" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="packages" type="462c0819:PsiDirectoryNode" />
-              <item name="layout" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="implementation" type="462c0819:PsiDirectoryNode" />
               <item name="webapp-navigation" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -397,15 +339,12 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="packages" type="462c0819:PsiDirectoryNode" />
-              <item name="layout" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp-navigation" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -420,11 +359,11 @@
       <recent name="$PROJECT_DIR$/package" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/dev-env/src/app/implementation/store/navigation" />
+      <recent name="$PROJECT_DIR$/dev-env/src/app/implementation/webapp-navigation" />
       <recent name="$PROJECT_DIR$/dev-env/src/app/packages/layout/src/webapp-navigation/components" />
       <recent name="$PROJECT_DIR$/dev-env/src/app/packages/layout" />
       <recent name="$PROJECT_DIR$/dev-env/src/app/packages/store" />
-      <recent name="$PROJECT_DIR$/dev-env/src/app/packages/common/src" />
-      <recent name="$PROJECT_DIR$/dev-env/src/app/packages/core/src" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -457,7 +396,9 @@
       <workItem from="1542981623011" duration="1625000" />
       <workItem from="1543340499876" duration="353000" />
       <workItem from="1543427132232" duration="525000" />
-      <workItem from="1543598904415" duration="41760000" />
+      <workItem from="1543598904415" duration="44889000" />
+      <workItem from="1543874207767" duration="5832000" />
+      <workItem from="1544381087300" duration="2779000" />
     </task>
     <task id="LOCAL-00001" summary="single karma run and checking in jenkins what happens when test fails">
       <created>1540063198293</created>
@@ -515,11 +456,18 @@
       <option name="project" value="LOCAL" />
       <updated>1543785732930</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="making package structure uniform, cleaning up, updating peerdeps to packages">
+      <created>1543791568875</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1543791568875</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="127822000" />
+    <option name="totallyTimeSpent" value="139562000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -531,25 +479,25 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="769" extended-state="6" />
+    <frame x="0" y="23" width="1280" height="773" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32899022" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35107228" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32988167" sideWeight="0.49722" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.375" sideWeight="0.4940429" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32890856" sideWeight="0.5250199" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32988167" sideWeight="0.49722" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32899022" sideWeight="0.4940429" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32988167" sideWeight="0.50277996" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.375" sideWeight="0.50913423" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.49086577" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -596,7 +544,8 @@
     <MESSAGE value="initial version" />
     <MESSAGE value="moved generation of elements and heading into directive, logic and store in separate packages to avoid unneeded dependencies" />
     <MESSAGE value="forgot adding files" />
-    <option name="LAST_COMMIT_MESSAGE" value="forgot adding files" />
+    <MESSAGE value="making package structure uniform, cleaning up, updating peerdeps to packages" />
+    <option name="LAST_COMMIT_MESSAGE" value="making package structure uniform, cleaning up, updating peerdeps to packages" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -605,123 +554,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/dev-env/node_modules/@ngrx/entity/src/models.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="30" column="29" lean-forward="true" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dev-env/node_modules/@ngrx/entity/src/create_adapter.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="29" lean-forward="true" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dev-env/src/app/packages/core/src/navigation/logic/view-model-logic.interface.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="9" column="24" lean-forward="true" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#83#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dev-env/src/app/packages/core/src/navigation/logic/view-model-logic.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="101">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#83#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dev-env/src/app/packages/core/src/navigation/model/base-nav-item.model.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="16" lean-forward="false" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dev-env/src/app/packages/core/src/navigation/model/base-nav-item-denormalized.model.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="16" lean-forward="false" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dev-env/src/app/packages/core/src/navigation/model/default-nav-item.model.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="20" lean-forward="false" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dev-env/src/app/packages/store/src/navigation/nav-items/index.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="28" lean-forward="true" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dev-env/src/app/packages/store/src/navigation/index.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="24" lean-forward="true" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#44#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dev-env/src/app/packages/core/src/media-query.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="65" lean-forward="true" selection-start-line="10" selection-start-column="65" selection-end-line="10" selection-end-column="65" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dev-env/src/app/packages/store/src/index.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="27" lean-forward="false" selection-start-line="0" selection-start-column="27" selection-end-line="0" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dev-env/src/app/packages/layout/src/webapp-navigation/components/webapp-navigation.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="65" column="54" lean-forward="true" selection-start-line="65" selection-start-column="54" selection-end-line="65" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dev-env/src/app/packages/layout/src/webapp-navigation/index.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dev-env/src/app/packages/layout/src/webapp-navigation/components/index.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="40" lean-forward="false" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -729,7 +565,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="38" lean-forward="false" selection-start-line="1" selection-start-column="38" selection-end-line="1" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -737,7 +572,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="27" lean-forward="false" selection-start-line="0" selection-start-column="27" selection-end-line="0" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -745,7 +579,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="20" lean-forward="false" selection-start-line="0" selection-start-column="20" selection-end-line="0" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -753,23 +586,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="22" lean-forward="true" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dev-env/src/app/packages/store/public_api.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="20" lean-forward="false" selection-start-line="0" selection-start-column="20" selection-end-line="0" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dev-env/src/app/packages/store/index.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -777,7 +593,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="12" lean-forward="false" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -785,7 +600,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="33" lean-forward="true" selection-start-line="1" selection-start-column="33" selection-end-line="1" selection-end-column="47" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -793,7 +607,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="19" lean-forward="false" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -801,17 +614,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="30" lean-forward="false" selection-start-line="1" selection-start-column="30" selection-end-line="1" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dev-env/src/app/packages/layout/src/layout.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="49" column="15" lean-forward="true" selection-start-line="49" selection-start-column="15" selection-end-line="49" selection-end-column="15" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -819,7 +621,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="25" lean-forward="false" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -827,9 +628,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -837,9 +635,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -847,7 +642,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="21" lean-forward="false" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -855,7 +649,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="3" lean-forward="true" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -863,7 +656,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -871,58 +663,145 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="36" lean-forward="false" selection-start-line="0" selection-start-column="36" selection-end-line="0" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev-env/src/app/packages/layout/src/webapp-navigation/components/nav-element-generator.directive.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1396">
+          <caret line="101" column="40" lean-forward="false" selection-start-line="101" selection-start-column="40" selection-end-line="101" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#160#0" expanded="false" />
+            <marker date="1543790447000" expanded="true" signature="3107:3321" ph="..." />
+            <marker date="1543790447000" expanded="true" signature="3192:3321" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev-env/src/app/packages/layout/src/webapp-navigation/components/layout-generator.interface.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev-env/src/app/packages/core/src/navigation/model/view-model.model.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="48" lean-forward="true" selection-start-line="3" selection-start-column="48" selection-end-line="3" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev-env/src/app/packages/layout/src/webapp-navigation/components/header-generator.directive.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="735">
+          <caret line="49" column="21" lean-forward="false" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#176#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev-env/src/app/packages/layout/src/webapp-navigation/components/component-generator.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev-env/src/app/packages/layout/index.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="27" lean-forward="false" selection-start-line="0" selection-start-column="27" selection-end-line="0" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev-env/src/app/packages/layout/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="30" lean-forward="false" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev-env/src/app/packages/store/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="3" lean-forward="false" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev-env/src/app/implementation/webapp-navigation/selectors" />
+    <entry file="file://$PROJECT_DIR$/dev-env/node_modules/@ngrx/entity/src/models.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="53" column="4" lean-forward="false" selection-start-line="53" selection-start-column="4" selection-end-line="53" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev-env/src/app/implementation/store/index.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev-env/src/app/implementation/store/navigation/index.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev-env/src/app/packages/store/public_api.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="22" lean-forward="true" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev-env/src/app/packages/store/src/navigation/nav-items/index.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="28" lean-forward="false" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dev-env/src/app/packages/store/src/navigation/nav-items/actions.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-154">
-          <caret line="3" column="52" lean-forward="false" selection-start-line="3" selection-start-column="52" selection-end-line="3" selection-end-column="52" />
-          <folding>
-            <element signature="e#0#35#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dev-env/src/app/packages/store/src/navigation/nav-items/reducer.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="22" lean-forward="true" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+        <state relative-caret-position="315">
+          <caret line="24" column="21" lean-forward="false" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dev-env/src/app/packages/store/src/navigation/nav-items/selectors.ts">
+    <entry file="file://$PROJECT_DIR$/dev-env/src/app/packages/store/src/index.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="14" lean-forward="true" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+        <state relative-caret-position="0">
+          <caret line="0" column="7" lean-forward="false" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dev-env/src/app/packages/store/src/navigation/view-model/actions.ts">
+    <entry file="file://$PROJECT_DIR$/dev-env/src/app/packages/store/index.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-151">
-          <caret line="1" column="52" lean-forward="true" selection-start-line="1" selection-start-column="52" selection-end-line="1" selection-end-column="52" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dev-env/src/app/packages/store/src/navigation/view-model/selectors.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="68" lean-forward="false" selection-start-line="3" selection-start-column="68" selection-end-line="3" selection-end-column="68" />
+        <state relative-caret-position="0">
+          <caret line="0" column="29" lean-forward="false" selection-start-line="0" selection-start-column="29" selection-end-line="0" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dev-env/src/app/packages/store/src/navigation/view-model/reducer.ts">
+    <entry file="file://$PROJECT_DIR$/dev-env/src/app/packages/store/src/navigation/index.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="32" lean-forward="false" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
+        <state relative-caret-position="15">
+          <caret line="1" column="29" lean-forward="false" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
           <folding />
         </state>
       </provider>
@@ -935,79 +814,114 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dev-env/src/app/packages/layout/src/webapp-navigation/components/nav-element-generator.directive.ts">
+    <entry file="file://$PROJECT_DIR$/dev-env/src/app/packages/store/src/navigation/nav-items/reducer.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1396">
-          <caret line="101" column="40" lean-forward="false" selection-start-line="101" selection-start-column="40" selection-end-line="101" selection-end-column="40" />
+        <state relative-caret-position="159">
+          <caret line="16" column="40" lean-forward="true" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
           <folding>
-            <element signature="e#0#160#0" expanded="true" />
-            <marker date="1543790447000" expanded="true" signature="3107:3321" ph="..." />
-            <marker date="1543790447000" expanded="true" signature="3192:3321" ph="..." />
+            <element signature="e#0#68#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dev-env/src/app/packages/layout/src/webapp-navigation/components/layout-generator.interface.ts">
+    <entry file="file://$PROJECT_DIR$/dev-env/src/app/packages/store/src/navigation/view-model/reducer.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="-474">
+          <caret line="29" column="41" lean-forward="true" selection-start-line="29" selection-start-column="41" selection-end-line="29" selection-end-column="41" />
           <folding>
-            <element signature="e#0#58#0" expanded="true" />
+            <element signature="e#0#132#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dev-env/src/app/packages/core/src/navigation/model/view-model.model.ts">
+    <entry file="file://$PROJECT_DIR$/dev-env/src/app/implementation/store/navigation/module.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="48" lean-forward="true" selection-start-line="3" selection-start-column="48" selection-end-line="3" selection-end-column="48" />
+        <state relative-caret-position="150">
+          <caret line="10" column="3" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev-env/src/app/packages/store/src/navigation/nav-items/selectors.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="26" lean-forward="true" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dev-env/src/app/packages/layout/src/webapp-navigation/components/header-generator.directive.ts">
+    <entry file="file://$PROJECT_DIR$/dev-env/src/app/packages/store/src/navigation/view-model/selectors.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="49" column="21" lean-forward="false" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="21" />
+        <state relative-caret-position="45">
+          <caret line="3" column="22" lean-forward="true" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev-env/src/app/packages/store/src/navigation/view-model/actions.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="5" column="11" lean-forward="true" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev-env/src/app/implementation/store/navigation/selectors.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="40" column="20" lean-forward="true" selection-start-line="40" selection-start-column="20" selection-end-line="40" selection-end-column="20" />
           <folding>
             <element signature="e#0#176#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dev-env/src/app/packages/layout/src/webapp-navigation/components/component-generator.ts">
+    <entry file="file://$PROJECT_DIR$/dev-env/src/app/packages/layout/src/webapp-navigation/components/webapp-navigation.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        <state relative-caret-position="711">
+          <caret line="75" column="46" lean-forward="false" selection-start-line="75" selection-start-column="46" selection-end-line="75" selection-end-column="46" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dev-env/src/app/packages/layout/index.ts">
+    <entry file="file://$PROJECT_DIR$/dev-env/src/app/packages/layout/src/layout.module.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="27" lean-forward="false" selection-start-line="0" selection-start-column="27" selection-end-line="0" selection-end-column="27" />
+        <state relative-caret-position="-45">
+          <caret line="33" column="22" lean-forward="false" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dev-env/src/app/packages/layout/package.json">
+    <entry file="file://$PROJECT_DIR$/dev-env/src/app/app.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="30" lean-forward="true" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
+        <state relative-caret-position="120">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dev-env/src/app/packages/store/package.json">
+    <entry file="file://$PROJECT_DIR$/dev-env/src/app/implementation/webapp-navigation/webapp-navigation.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="3" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+        <state relative-caret-position="15">
+          <caret line="1" column="22" lean-forward="false" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package/package.json">
+    <entry file="file://$PROJECT_DIR$/dev-env/src/app/implementation/webapp-navigation/webapp-navigation.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+            <element signature="e#928#1673#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev-env/src/app/app.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1015,32 +929,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dev-env/src/app/packages/layout/src/webapp-navigation/components/webapp-navigation.component.ts">
+    <entry file="file://$PROJECT_DIR$/dev-env/src/app/app.module.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="33" column="28" lean-forward="false" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="28" />
+        <state relative-caret-position="211">
+          <caret line="15" column="20" lean-forward="false" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
           <folding>
-            <element signature="e#0#96#0" expanded="true" />
+            <element signature="e#0#58#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dev-env/src/app/app.component.ts">
+    <entry file="file://$PROJECT_DIR$/dev-env/src/app/implementation/webapp-navigation/webapp-navigation.module.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="112" column="4" lean-forward="false" selection-start-line="112" selection-start-column="4" selection-end-line="112" selection-end-column="4" />
+        <state relative-caret-position="225">
+          <caret line="15" column="28" lean-forward="false" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
           <folding>
-            <element signature="e#390#2008#0" expanded="false" />
-            <element signature="e#2193#2591#0" expanded="false" />
+            <element signature="e#0#41#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dev-env/src/app/app.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="56" lean-forward="true" selection-start-line="3" selection-start-column="56" selection-end-line="3" selection-end-column="56" />
-          <folding />
         </state>
       </provider>
     </entry>

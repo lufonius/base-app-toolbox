@@ -1,5 +1,2 @@
-import * as fromNavItems from './nav-items';
-import * as fromViewModel from './view-model';
-
-export { fromNavItems };
-export { fromViewModel };
+export * from './nav-items';
+export * from './view-model';

@@ -8,58 +8,56 @@ import {
   BATNavItemActionTypes
 } from "./actions";
 
-export const adapter = createEntityAdapter<BATNavItem>();
+export const batNavItemsAdapter = createEntityAdapter<BATNavItem>();
 
-export interface State extends EntityState<BATNavItem>{}
+export interface BATNavItemsState extends EntityState<BATNavItem>{}
 
-export const initialState: State = adapter.getInitialState();
+const initialState: BATNavItemsState = batNavItemsAdapter.getInitialState();
 
-
-export function reducer(state = initialState, action: BATNavItemActionsUnion): State {
+export function batNavItemsReducer(state = initialState, action: BATNavItemActionsUnion): BATNavItemsState {
   switch (action.type) {
 
     case BATNavItemActionTypes.ADD_NAV_ITEM: {
-      return adapter.addOne(action.payload.navItem, state);
+      return batNavItemsAdapter.addOne(action.payload.navItem, state);
     }
 
     case BATNavItemActionTypes.UPSERT_NAV_ITEM: {
-      return adapter.upsertOne(action.payload.navItem, state);
+      return batNavItemsAdapter.upsertOne(action.payload.navItem, state);
     }
 
     case BATNavItemActionTypes.ADD_NAV_ITEMS: {
-      return adapter.addMany(action.payload.navItems, state);
+      return batNavItemsAdapter.addMany(action.payload.navItems, state);
     }
 
     case BATNavItemActionTypes.UPSERT_NAV_ITEMS: {
-      return adapter.upsertMany(action.payload.navItems, state);
+      return batNavItemsAdapter.upsertMany(action.payload.navItems, state);
     }
 
     case BATNavItemActionTypes.UPDATE_NAV_ITEM: {
-      return adapter.updateOne(action.payload.navItem, state);
+      return batNavItemsAdapter.updateOne(action.payload.navItem, state);
     }
 
     case BATNavItemActionTypes.UPDATE_NAV_ITEMS: {
-      return adapter.updateMany(action.payload.navItems, state);
+      return batNavItemsAdapter.updateMany(action.payload.navItems, state);
     }
 
     case BATNavItemActionTypes.DELETE_NAV_ITEM: {
-      return adapter.removeOne(action.payload.id, state);
+      return batNavItemsAdapter.removeOne(action.payload.id, state);
     }
 
     case BATNavItemActionTypes.DELETE_NAV_ITEMS: {
-      return adapter.removeMany(action.payload.ids, state);
+      return batNavItemsAdapter.removeMany(action.payload.ids, state);
     }
 
     case BATNavItemActionTypes.LOAD_NAV_ITEMS: {
-      return adapter.addAll(action.payload.navItems, state);
+      return batNavItemsAdapter.addAll(action.payload.navItems, state);
     }
 
     case BATNavItemActionTypes.CLEAR_NAV_ITEMS: {
-      return adapter.removeAll({ ...state });
+      return batNavItemsAdapter.removeAll({ ...state });
     }
 
     default:
       return state;
   }
 }
-

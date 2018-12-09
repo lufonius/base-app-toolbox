@@ -2,13 +2,13 @@ import { Action } from "@ngrx/store";
 import { BATNavItem } from "@base-app-toolbox/core";
 
 export enum BATWebappNavigationActionTypes {
-  init = '[BATWebappNavigation] init',
+  viewModelInit = '[BATWebappNavigation] viewModelInit',
   goToNextLevel = '[BATWebappNavigation] goToNextLevel',
   goToPreviousLevel = '[BATWebappNavigation] goToPreviousLevel'
 }
 
-export class BATInitAction implements Action {
-  public readonly type = BATWebappNavigationActionTypes.init;
+export class BATViewModelInitAction implements Action {
+  public readonly type = BATWebappNavigationActionTypes.viewModelInit;
 
   constructor(public payload: { navItems: { [id: string]: BATNavItem } }) {}
 }
@@ -26,7 +26,7 @@ export class BATGoToPreviousLevelAction implements Action {
 }
 
 export type BATViewModelActionUnion =
-  BATInitAction
+  BATViewModelInitAction
 | BATGoToNextLevelAction
 | BATGoToPreviousLevelAction;
 

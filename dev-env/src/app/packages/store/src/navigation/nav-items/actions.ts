@@ -16,72 +16,72 @@ export enum BATNavItemActionTypes {
   CLEAR_NAV_ITEMS = '[BATNavItem] Clear NavItems',
 }
 
-export class LoadBATNavItems implements Action {
+export class BATLoadNavItems implements Action {
   readonly type = BATNavItemActionTypes.LOAD_NAV_ITEMS;
 
   constructor(public payload: { navItems: BATNavItem[] }) {}
 }
 
-export class AddBATNavItem implements Action {
+export class BATAddNavItem implements Action {
   readonly type = BATNavItemActionTypes.ADD_NAV_ITEM;
 
   constructor(public payload: { navItem: BATNavItem }) {}
 }
 
-export class UpsertBATNavItem implements Action {
+export class BATUpsertNavItem implements Action {
   readonly type = BATNavItemActionTypes.UPSERT_NAV_ITEM;
 
   constructor(public payload: { navItem: BATNavItem }) {}
 }
 
-export class AddBATNavItems implements Action {
+export class BATAddNavItems implements Action {
   readonly type = BATNavItemActionTypes.ADD_NAV_ITEMS;
 
   constructor(public payload: { navItems: BATNavItem[] }) {}
 }
 
-export class UpsertBATNavItems implements Action {
+export class BATUpsertNavItems implements Action {
   readonly type = BATNavItemActionTypes.UPSERT_NAV_ITEMS;
 
   constructor(public payload: { navItems: BATNavItem[] }) {}
 }
 
-export class UpdateBATNavItem implements Action {
+export class BATUpdateNavItem implements Action {
   readonly type = BATNavItemActionTypes.UPDATE_NAV_ITEM;
 
   constructor(public payload: { navItem: Update<BATNavItem> }) {}
 }
 
-export class UpdateBATNavItems implements Action {
+export class BATUpdateNavItems implements Action {
   readonly type = BATNavItemActionTypes.UPDATE_NAV_ITEMS;
 
   constructor(public payload: { navItems: Update<BATNavItem>[] }) {}
 }
 
-export class DeleteBATNavItem implements Action {
+export class BATDeleteNavItem implements Action {
   readonly type = BATNavItemActionTypes.DELETE_NAV_ITEM;
 
   constructor(public payload: { id: string }) {}
 }
 
-export class DeleteBATNavItems implements Action {
+export class BATDeleteNavItems implements Action {
   readonly type = BATNavItemActionTypes.DELETE_NAV_ITEMS;
 
   constructor(public payload: { ids: string[] }) {}
 }
 
-export class ClearBATNavItems implements Action {
+export class BATClearNavItems implements Action {
   readonly type = BATNavItemActionTypes.CLEAR_NAV_ITEMS;
 }
 
 export type BATNavItemActionsUnion =
-  | LoadBATNavItems
-  | AddBATNavItem
-  | UpsertBATNavItem
-  | AddBATNavItems
-  | UpsertBATNavItems
-  | UpdateBATNavItem
-  | UpdateBATNavItems
-  | DeleteBATNavItem
-  | DeleteBATNavItems
-  | ClearBATNavItems;
+  | BATLoadNavItems
+  | BATAddNavItem
+  | BATUpsertNavItem
+  | BATAddNavItems
+  | BATUpsertNavItems
+  | BATUpdateNavItem
+  | BATUpdateNavItems
+  | BATDeleteNavItem
+  | BATDeleteNavItems
+  | BATClearNavItems;

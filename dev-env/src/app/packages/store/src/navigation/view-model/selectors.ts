@@ -1,4 +1,4 @@
-import { State } from "./reducer";
+import { BATViewModelState } from "./reducer";
 
-export const getViewModelState = (state: State) => state.viewModel;
-export const getCurrentLevel = (state: State) => state.currentLevel;
+export const batViewModelSelectViewModel = (state: BATViewModelState) => state.viewModel;
+export const batViewModelSelectCurrentLevel = (state: BATViewModelState) => state.currentLevel;

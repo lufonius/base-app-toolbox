@@ -1,0 +1,15 @@
+<bat-webapp-nav
+  [viewModel]="viewModel$ | async"
+  [currentLevel]="currentLevel$ | async"
+  (goingToNextLevel)="goToNextLevel($event.navItem, $event.level)"
+  (goingToPreviousLevel)="goToPreviousLevel($event.level)">
+  <bat-webapp-nav-heading headerTitle="hello"></bat-webapp-nav-heading>
+  <bat-webapp-nav-element>
+    <ng-template #navElementTemplate let-navItem="navItem">
+      this is a template: {{ navItem.id }}
+    </ng-template>
+  </bat-webapp-nav-element>
+  <bat-webapp-nav-footer>
+    this is a footer
+  </bat-webapp-nav-footer>
+</bat-webapp-nav>

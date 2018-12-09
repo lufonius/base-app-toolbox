@@ -7,28 +7,28 @@ import {
 import {
   BATGoToNextLevelAction,
   BATGoToPreviousLevelAction,
-  BATInitAction,
+  BATViewModelInitAction,
   BATViewModelActionUnion,
   BATWebappNavigationActionTypes
 } from "./actions";
 
-export interface State {
+export interface BATViewModelState {
   viewModel: BATDefaultNavigationViewModel,
   currentLevel: number
 }
 
-export const initialState: State = {
+const initialState: BATViewModelState = {
   viewModel: {},
   currentLevel: 1
 };
 
 const viewModelLogic: BATViewModelLogic = new BATDefaultNavigationViewModelLogic();
 
-export function reducer(state = initialState, action: BATViewModelActionUnion): State {
+export function batViewModelReducer(state = initialState, action: BATViewModelActionUnion): BATViewModelState {
   switch (action.type) {
 
-    case BATWebappNavigationActionTypes.init: {
-      const payload = (<BATInitAction>action).payload;
+    case BATWebappNavigationActionTypes.viewModelInit: {
+      const payload = (<BATViewModelInitAction>action).payload;
       const navItems = payload.navItems;
 
       const initial = viewModelLogic.init(navItems);
