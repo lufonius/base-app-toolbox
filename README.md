@@ -11,6 +11,8 @@ The goal is to have multiple packages. The core package defines entities (might 
 - Webapp Navigation as a UI component, highly customizeable and responsive
 - Notifications
 - Error Handling, bases on Notification
+- Saving Page Scroll State
+- History for visited pages (ex. when used for swiping)
 - User management, including roles, permissions per role and specific permissions per user, which overwrite the roles permission
 
 The packages should be available on npm, structured like this:
