@@ -32,7 +32,7 @@ export class BATDefaultNavigationViewModelLogic implements BATViewModelLogic {
     let nextLevelNavItems = this.getNavItemsById(navItems, navItem.childrenIds);
 
     if(navItem.childrenIds.length > 0) {
-      let nextLevel = level + 1;
+      nextLevel = level + 1;
       newViewModel[`${nextLevel}`] = { navItems: nextLevelNavItems, parentNavItem: navItem };
     }
 

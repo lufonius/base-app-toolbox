@@ -6,7 +6,7 @@ import {
   Output,
 } from '@angular/core';
 import { ViewEncapsulation } from "@angular/core";
-import { Observable } from "rxjs/index";
+import { Observable } from "rxjs";
 import { map } from "rxjs/operators";
 import {
   BATDefaultNavigationViewModel,
