@@ -1,5 +1,4 @@
-import {Input, TemplateRef, ViewRef} from "@angular/core";
-import { BATComponentGenerator } from "./component-generator";
+import { TemplateRef, ViewRef } from "@angular/core";
 
 export interface BATLayoutGenerator {
   mobileTemplate: TemplateRef<any>;

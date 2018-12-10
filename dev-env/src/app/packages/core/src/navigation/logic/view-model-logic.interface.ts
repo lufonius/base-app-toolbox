@@ -14,13 +14,13 @@ export interface BATViewModelLogic {
   goToNextLevel(
     viewModel: BATDefaultNavigationViewModel,
     navItems: { [id: string]: BATNavItem },
-    navItem: BATNavItem,
-    level: number
+    parentNavItem: BATNavItem,
+    currentLevel: number
   ): BATViewModelLogicType;
 
   goToPreviousLevel(
     viewModel: BATDefaultNavigationViewModel,
-    level: number
+    currentLevel: number
   ): BATViewModelLogicType;
 
 }

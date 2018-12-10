@@ -5,8 +5,11 @@
   (goingToPreviousLevel)="goToPreviousLevel($event.level)">
   <bat-webapp-nav-heading headerTitle="hello"></bat-webapp-nav-heading>
   <bat-webapp-nav-element>
-    <ng-template #navElementTemplate let-navItem="navItem">
-      this is a template: {{ navItem.id }}
+    <ng-template #desktopTemplate let-navItem="navItem" let-level="level">
+      <div (click)="goToNextLevel(navItem, level)">
+        this is a template: {{ navItem.title }}<br>
+        level: {{level}}
+      </div>
     </ng-template>
   </bat-webapp-nav-element>
   <bat-webapp-nav-footer>

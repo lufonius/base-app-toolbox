@@ -1,4 +1,5 @@
 import { BATNavItem } from "./base-nav-item.model";
+import * as _ from 'lodash';
 
 export class BATNavItemDenormalized extends BATNavItem {
 
@@ -6,11 +7,12 @@ export class BATNavItemDenormalized extends BATNavItem {
     super();
 
     if(!!navItem) {
-      this.id = navItem.id;
-      this.childrenIds = navItem.childrenIds;
-      this.parentId = navItem.parentId;
-      this.route = navItem.route;
+      //copy all of the properties (custom ones too, which are not relevant for the logic)
+      Object.keys(navItem).forEach((key: string) => {
+        this[key] = _.cloneDeep(navItem[key]);
+      });
     }
+
   }
 
   children?: BATNavItemDenormalized[] = [];

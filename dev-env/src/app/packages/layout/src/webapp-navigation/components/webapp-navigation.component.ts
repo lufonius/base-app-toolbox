@@ -31,8 +31,8 @@ export class BATWebappNavigationComponent {
 
   @Input() viewModel: BATDefaultNavigationViewModel = {};
   @Input() currentLevel: number = 1;
-  @Output() goingToNextLevel = new EventEmitter<{currentNavItem: BATNavItemDenormalized, currentLevel: number}>();
-  @Output() goingToPreviousLevel = new EventEmitter<{currentLevel: number}>();
+  @Output() goingToNextLevel = new EventEmitter<{navItem: BATNavItemDenormalized, level: number}>();
+  @Output() goingToPreviousLevel = new EventEmitter<{level: number}>();
 
   public objectKeys = Object.keys;
 
@@ -68,12 +68,12 @@ export class BATWebappNavigationComponent {
     )
   }
 
-  goToNextLevel(currentNavItem: BATNavItemDenormalized, currentLevel: number) {
-    this.goingToNextLevel.emit({ currentNavItem, currentLevel });
+  goToNextLevel(navItem: BATNavItemDenormalized, level: number) {
+    this.goingToNextLevel.emit({ navItem, level });
   }
 
-  goToPreviousLevel(currentLevel: number) {
-    this.goingToPreviousLevel.emit({ currentLevel });
+  goToPreviousLevel(level: number) {
+    this.goingToPreviousLevel.emit({ level });
   }
 }
 

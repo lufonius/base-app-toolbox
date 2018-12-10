@@ -112,8 +112,8 @@ export class BATWebappNavigationHeaderGeneratorDirective implements BATLayoutGen
 
     componentRef.instance.headerTitle = this.headerTitle;
     componentRef.instance.isBackButtonVisible = isBackButtonVisible;
-    componentRef.instance.backClicked.subscribe(() => { this.backClickFn(); });
-    componentRef.instance.closeClicked.subscribe(() => { this.closeClickFn(); });
+    componentRef.instance.backClicked.subscribe(() => { if(!!this.backClickFn) this.backClickFn(); });
+    componentRef.instance.closeClicked.subscribe(() => { if(!!this.closeClickFn) this.closeClickFn(); });
 
     return componentRef;
   }

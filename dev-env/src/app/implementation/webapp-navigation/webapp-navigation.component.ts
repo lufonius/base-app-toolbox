@@ -62,6 +62,14 @@ export class WebappNavigationComponent implements OnInit {
       subtitle: "fifthsubtitle",
       parentId: "1",
       childrenIds: []
+    },
+    {
+      id: "6",
+      route: "",
+      title: "sixth",
+      subtitle: "sixthsubtitle",
+      parentId: "2",
+      childrenIds: []
     }
   ];
   public navItemEntites: {[id: string]: BATDefaultNavItem} = {};
@@ -72,7 +80,6 @@ export class WebappNavigationComponent implements OnInit {
     this.navItems$ = this.store.pipe(select(getNavItemsEntites));
     this.viewModel$ = this.store.pipe(select(getViewModel));
     this.currentLevel$ = this.store.pipe(select(getCurrentLevel));
-
 
     this.navItems$.subscribe((navItems: {[id: string]: BATDefaultNavItem}) => {
       this.navItemEntites = navItems;
