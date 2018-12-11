@@ -6,10 +6,16 @@ import {MediaChange, ObservableMedia} from "@angular/flex-layout";
 export class BATMediaQueryService {
 
   public isMobileMediaQuery$: Subject<boolean> = new BehaviorSubject(null);
+  public isDesktopMediaQuery$: Subject<boolean> = new BehaviorSubject(null);
+  public mediaQuery$: Subject<'mobile' | 'desktop'> = new BehaviorSubject(null);
 
  constructor(public observableMedia$: ObservableMedia) {
-   this.observableMedia$.subscribe((mediaQuery: MediaChange) => {
-     this.isMobileMediaQuery$.next(mediaQuery.mqAlias === 'xs' || mediaQuery.mqAlias === 'sm');
+   this.observableMedia$.subscribe((mediaQueryChange: MediaChange) => {
+     let isMobileMediaQuery = mediaQueryChange.mqAlias === 'xs' || mediaQueryChange.mqAlias === 'sm';
+     let mediaQuery: 'mobile' | 'desktop' = (isMobileMediaQuery) ? 'mobile' : 'desktop';
+     this.isMobileMediaQuery$.next(isMobileMediaQuery);
+     this.isDesktopMediaQuery$.next(!isMobileMediaQuery);
+     this.mediaQuery$.next(mediaQuery);
    });
  }
 }

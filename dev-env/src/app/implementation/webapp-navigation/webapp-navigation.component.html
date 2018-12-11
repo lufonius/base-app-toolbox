@@ -3,12 +3,25 @@
   [currentLevel]="currentLevel$ | async"
   (goingToNextLevel)="goToNextLevel($event.navItem, $event.level)"
   (goingToPreviousLevel)="goToPreviousLevel($event.level)">
-  <bat-webapp-nav-heading headerTitle="hello"></bat-webapp-nav-heading>
+  <bat-webapp-nav-heading headerTitle="hello">
+    <ng-template #desktopTemplate>
+      desktop heading
+    </ng-template>
+    <ng-template #mobileTemplate>
+      mobile heading
+    </ng-template>
+  </bat-webapp-nav-heading>
   <bat-webapp-nav-element>
     <ng-template #desktopTemplate let-navItem="navItem" let-level="level">
       <div (click)="goToNextLevel(navItem, level)">
-        this is a template: {{ navItem.title }}<br>
+        this is a desktop template: {{ navItem.title }}<br>
         level: {{level}}
+      </div>
+    </ng-template>
+    <ng-template #mobileTemplate let-navItem="navItem" let-level="level">
+      <div (click)="goToNextLevel(navItem, level)">
+        this is a mobile template {{ navItem.title }}<br>
+        level: {{ level }}
       </div>
     </ng-template>
   </bat-webapp-nav-element>

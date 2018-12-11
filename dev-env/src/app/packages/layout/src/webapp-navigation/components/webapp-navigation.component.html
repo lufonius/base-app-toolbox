@@ -18,8 +18,11 @@
     <div *ngIf="!(mediaQueryService.isMobileMediaQuery$ | async)">
       <ng-container
         batHeaderGenerator
+        [mobileTemplate]="headingComponent.mobileTemplate"
+        [desktopTemplate]="headingComponent.desktopTemplate"
+        [headerTitle]="headingComponent.headerTitle"
         [level]="currentLevel"
-        [mediaQuery]="getMediaQuery() | async"
+        [mediaQuery]="mediaQueryService.mediaQuery$ | async"
         [navItems]="viewModel[''+ currentLevel].navItems"
         [parentNavItem]="viewModel[''+currentLevel].parentNavItem"
         [viewModel]="viewModel"
@@ -42,8 +45,11 @@
           <div *ngIf="(mediaQueryService.isMobileMediaQuery$ | async)">
             <ng-container
               batHeaderGenerator
+              [mobileTemplate]="headingComponent.mobileTemplate"
+              [desktopTemplate]="headingComponent.desktopTemplate"
+              [headerTitle]="headingComponent.headerTitle"
               [level]="level"
-              [mediaQuery]="getMediaQuery() | async"
+              [mediaQuery]="mediaQueryService.mediaQuery$ | async"
               [navItems]="viewModel[level].navItems"
               [parentNavItem]="viewModel[level].parentNavItem"
               [viewModel]="viewModel"
@@ -56,19 +62,20 @@
 
           <div ngClass.lt-md="bat-navigation-element-container-lt-md">
             <!--[style.margin-top]="getMarginTopStyle(i)"-->
-            <div  class="bat-navigation-element-divider"></div>
+            <!--hide on mobile if there's a mobile template, hide desktop if there's a desktop template-->
+            <div class="bat-navigation-element-divider" *ngIf="showDefaultDivider((mediaQueryService.mediaQuery$ | async), !!elementComponent.mobileTemplate, !!elementComponent.desktopTemplate)"></div>
             <ng-container *ngFor="let navItem of viewModel[level].navItems">
 
               <ng-container
                 batNavElementGenerator
                 [mobileTemplate]="elementComponent.mobileTemplate"
                 [desktopTemplate]="elementComponent.desktopTemplate"
-                [mediaQuery]="getMediaQuery() | async"
+                [mediaQuery]="mediaQueryService.mediaQuery$ | async"
                 [navItem]="navItem"
                 [level]="level"
                 [navElementClickFn]="wrap(goToNextLevel,navItem, level)"></ng-container>
 
-              <div class="bat-navigation-element-divider"></div>
+              <div class="bat-navigation-element-divider" *ngIf="showDefaultDivider((mediaQueryService.mediaQuery$ | async), !!elementComponent.mobileTemplate, !!elementComponent.desktopTemplate)"></div>
             </ng-container>
           </div>
         </div>

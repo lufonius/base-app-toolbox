@@ -6,8 +6,6 @@ import {
   Output,
 } from '@angular/core';
 import { ViewEncapsulation } from "@angular/core";
-import { Observable } from "rxjs";
-import { map } from "rxjs/operators";
 import {
   BATDefaultNavigationViewModel,
   BATNavItemDenormalized,
@@ -62,10 +60,15 @@ export class BATWebappNavigationComponent {
     return () => fn.apply(this, params);
   }
 
-  getMediaQuery(): Observable<'mobile' | 'desktop'> {
-    return this.mediaQueryService.isMobileMediaQuery$.pipe(
-      map((isMobileMediaQuery: boolean) => (isMobileMediaQuery) ? 'mobile' : 'desktop')
-    )
+  showDefaultDivider(
+    mediaQuery: 'mobile' | 'desktop',
+    hasMobileElementTemplate: boolean,
+    hasDesktopElementTemplate: boolean
+  ) {
+    if(mediaQuery === 'mobile' && hasMobileElementTemplate) return false;
+    if(mediaQuery === 'desktop' && hasDesktopElementTemplate) return false;
+
+    return true;
   }
 
   goToNextLevel(navItem: BATNavItemDenormalized, level: number) {
