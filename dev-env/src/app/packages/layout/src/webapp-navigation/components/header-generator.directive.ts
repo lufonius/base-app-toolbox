@@ -13,10 +13,11 @@ import { BATLayoutGenerator } from "./layout-generator.interface";
 import {
   BATDefaultNavItem,
   BATNavItem,
-  BATDefaultNavigationViewModel
+  BATDefaultNavigationViewModel, BATMediaQueryService
 } from "@base-app-toolbox/core";
 import { BATComponentGenerator } from "./component-generator";
 import { BATWebappNavigationDefaultHeadingComponent } from "./default-heading/default-heading.component";
+import {last} from "rxjs/operators";
 
 @Directive({
   selector: '[batHeaderGenerator]'
@@ -25,6 +26,7 @@ export class BATWebappNavigationHeaderGeneratorDirective implements BATLayoutGen
 
   @Input() mobileTemplate: TemplateRef<any>;
   @Input() desktopTemplate: TemplateRef<any>;
+
   @Input() public mediaQuery: 'mobile' | 'desktop' = 'mobile';
 
   public componentGenerator: BATComponentGenerator;
@@ -41,7 +43,8 @@ export class BATWebappNavigationHeaderGeneratorDirective implements BATLayoutGen
     public vc: ViewContainerRef,
     public ref: ChangeDetectorRef,
     public injector: Injector,
-    public componentFactoryResolver: ComponentFactoryResolver
+    public componentFactoryResolver: ComponentFactoryResolver,
+    public mediaQueryService: BATMediaQueryService
   ) {
     this.componentGenerator
       = new BATComponentGenerator(this.injector, this.componentFactoryResolver);

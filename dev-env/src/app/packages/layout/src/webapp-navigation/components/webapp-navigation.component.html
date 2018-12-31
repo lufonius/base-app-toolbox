@@ -13,16 +13,18 @@
   [@navigationLevels]="(mediaQueryService.isMobileMediaQuery$ | async) ? currentLevel : '1'"
   [@visibility]="visibilityState">
   <!--[style.transform-origin]="getTransformOriginStyle(transformOrigin.x, transformOrigin.y)"-->
-  <div ngClass.lt-md="bat-navigation-strawler-lt-md" ngClass.gt-sm="bat-navigation-strawler-gt-sm">
+  <div
+    ngClass.lt-md="bat-navigation-strawler-lt-md"
+    ngClass.gt-sm="bat-navigation-strawler-gt-sm">
 
-    <div *ngIf="!(mediaQueryService.isMobileMediaQuery$ | async)">
+    <div *ngIf="(mediaQueryService.isDesktopMediaQuery$ | async)">
       <ng-container
         batHeaderGenerator
         [mobileTemplate]="headingComponent.mobileTemplate"
         [desktopTemplate]="headingComponent.desktopTemplate"
+        [mediaQuery]="mediaQueryService.mediaQuery$ | async"
         [headerTitle]="headingComponent.headerTitle"
         [level]="currentLevel"
-        [mediaQuery]="mediaQueryService.mediaQuery$ | async"
         [navItems]="viewModel[''+ currentLevel].navItems"
         [parentNavItem]="viewModel[''+currentLevel].parentNavItem"
         [viewModel]="viewModel"
@@ -48,14 +50,13 @@
               [mobileTemplate]="headingComponent.mobileTemplate"
               [desktopTemplate]="headingComponent.desktopTemplate"
               [headerTitle]="headingComponent.headerTitle"
-              [level]="level"
               [mediaQuery]="mediaQueryService.mediaQuery$ | async"
+              [level]="level"
               [navItems]="viewModel[level].navItems"
               [parentNavItem]="viewModel[level].parentNavItem"
               [viewModel]="viewModel"
               [backClickFn]="wrap(goToPreviousLevel,level)"
               [closeClickFn]="">
-
             </ng-container>
 
           </div>
@@ -63,7 +64,9 @@
           <div ngClass.lt-md="bat-navigation-element-container-lt-md">
             <!--[style.margin-top]="getMarginTopStyle(i)"-->
             <!--hide on mobile if there's a mobile template, hide desktop if there's a desktop template-->
-            <div class="bat-navigation-element-divider" *ngIf="showDefaultDivider((mediaQueryService.mediaQuery$ | async), !!elementComponent.mobileTemplate, !!elementComponent.desktopTemplate)"></div>
+            <div
+              class="bat-navigation-element-divider"
+              *ngIf="showDefaultDivider((mediaQueryService.mediaQuery$ | async), !!elementComponent.mobileTemplate, !!elementComponent.desktopTemplate)"></div>
             <ng-container *ngFor="let navItem of viewModel[level].navItems">
 
               <ng-container

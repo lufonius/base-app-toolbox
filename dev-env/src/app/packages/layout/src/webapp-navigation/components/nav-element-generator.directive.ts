@@ -10,7 +10,7 @@ import {
 } from '@angular/core';
 import {
   BATNavItem,
-  BATDefaultNavItem
+  BATDefaultNavItem, BATMediaQueryService
 } from "@base-app-toolbox/core";
 
 import { BATWebappNavigationDefaultElementComponent } from "./default-element/default-element.component";
@@ -24,6 +24,7 @@ export class BATWebappNavigationNavElementGeneratorDirective implements BATLayou
 
   @Input() public mobileTemplate: TemplateRef<any>;
   @Input() public desktopTemplate: TemplateRef<any>;
+
   @Input() public mediaQuery: 'mobile' | 'desktop' = 'mobile';
 
   public componentGenerator: BATComponentGenerator;
@@ -40,15 +41,22 @@ export class BATWebappNavigationNavElementGeneratorDirective implements BATLayou
     public vc: ViewContainerRef,
     public ref: ChangeDetectorRef,
     public injector: Injector,
-    public componentFactoryResolver: ComponentFactoryResolver
+    public componentFactoryResolver: ComponentFactoryResolver,
+    public mediaQueryService: BATMediaQueryService
   ) {
     this.componentGenerator
       = new BATComponentGenerator(this.injector, this.componentFactoryResolver);
   }
 
   ngAfterViewInit() {
-    console.log(this);
-    switch(this.mediaQuery) {
+    this.mediaQueryService.mediaQuery$.subscribe((mediaQuery) => {
+      this.vc.clear();
+      this.generateLayout(mediaQuery);
+    });
+  }
+
+  generateLayout(mediaQuery) {
+    switch(mediaQuery) {
       case 'mobile': {
         this.insertView(this.generateMobileLayout());
         break;

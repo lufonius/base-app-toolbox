@@ -1,12 +1,17 @@
 import { NgModule } from '@angular/core';
-import { BATMediaQueryService } from "./media-query.service";
+import { BATDefaultMediaQueryService } from "./default-media-query.service";
+import { BATMediaQueryService } from "./media-query";
 
 @NgModule({
  imports: [],
  exports: [],
  declarations: [],
  providers: [
-   BATMediaQueryService
+   {
+     provide: BATMediaQueryService,
+     useClass: BATDefaultMediaQueryService
+   }
+
  ],
 })
 export class BATCoreModule { }

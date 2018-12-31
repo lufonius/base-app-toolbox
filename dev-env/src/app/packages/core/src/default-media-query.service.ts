@@ -1,9 +1,11 @@
 import { Injectable } from '@angular/core';
-import {BehaviorSubject, Subject} from "rxjs/index";
+import {BehaviorSubject, Observable, Subject} from "rxjs/index";
 import {MediaChange, ObservableMedia} from "@angular/flex-layout";
+import {last} from "rxjs/operators";
+import {BATMediaQueryService} from "./media-query";
 
 @Injectable()
-export class BATMediaQueryService {
+export class BATDefaultMediaQueryService implements BATMediaQueryService{
 
   public isMobileMediaQuery$: Subject<boolean> = new BehaviorSubject(null);
   public isDesktopMediaQuery$: Subject<boolean> = new BehaviorSubject(null);
